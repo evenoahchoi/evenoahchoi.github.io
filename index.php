@@ -21,14 +21,14 @@
 				<!-- Intro -->
 					<section class="intro">
 						<header>
-							<h1>개발하는 정대리</h1>
-							<p>오늘도 빡코딩 하고 계신가요? 🔥👨‍💻 <a href="https://twitter.com/ajlkn">@ajlkn</a> / <a href="https://html5up.net">HTML5 UP</a></p>
+							<h1>비오기전 알려줄게 비구르미</h1>
+							<p>우산 가져왔는데 비가 안온다..?</p>
 							<ul class="actions">
 								<li><a href="#first" class="arrow scrolly"><span class="label">Next</span></a></li>
 							</ul>
 						</header>
 						<div class="content">
-							<span class="image fill" data-position="center"><img src="images/profile.png" alt="" /></span>
+							<span class="image fill" data-position="center"><img src="images/Fotoram.io.png" alt="" /></span>
 						</div>
 					</section>
 
