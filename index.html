@@ -1,7 +1,1175 @@
 <!DOCTYPE html>
-<html>
-<body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Plant care app - Keep your plants alive | Planta</title>
+    <meta charSet="UTF-8" />
+    <link rel="canonical" href="https://getplanta.com/" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <meta name="theme-color" content="#224722" />
+    <meta name="description" content="Individual care schedule and reminders for your plants, recommendations, step by step guides, identification, light meter and more. Keep your plants alive with Planta!" />
+    <meta property="og:title" content="Plant care app - Keep your plants alive | Planta" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="Individual care schedule and reminders for your plants, recommendations, step by step guides, identification, light meter and more. Keep your plants alive with Planta!" />
+    <meta property="og:url" content="/?ref=onepagelove" />
+    <meta property="og:image" content="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTA2IiBoZWlnaHQ9IjI5IiB2aWV3Qm94PSIwIDAgMTA2IDI5IiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8ZyBjbGlwLXBhdGg9InVybCgjY2xpcDBfMV80NjIpIj4KPHBhdGggZD0iTTIzLjU5OTcgMEgyOC42MjU4VjI4LjE4NDhIMjMuNTk5N1YwWiIgZmlsbD0iIzIyNDcyMiIvPgo8cGF0aCBkPSJNMzIuMjM1MiAxMy42NTM1QzMyLjM4MDIgMTIuNzc1MyAzMi42NzAyIDExLjkyODkgMzMuMTIxMyAxMS4xMTQ1QzMzLjU1NjIgMTAuMzAwMSAzNC4xMzYyIDkuNTQ5NTggMzQuODQ1IDguODYyOTJDMzUuNTUzOCA4LjE3NjI2IDM2LjQ1NTkgNy42MTczNiAzNy41NTEzIDcuMjE4MTRDMzguNjQ2OCA2LjgwMjk1IDM5Ljg1NSA2LjYxMTMzIDQxLjE3NiA2LjYxMTMzQzQyLjgxOTEgNi42MTEzMyA0NC4yNTI5IDYuODM0ODkgNDUuNDQ1IDcuMjk3OThDNDYuNjM3MSA3Ljc0NTExIDQ3LjU3MTQgOC4zOTk4MyA0OC4yNDggOS4yMzAyQzQ4LjkyNDYgMTAuMDYwNiA0OS40MDc5IDEwLjk4NjggNDkuNzE0IDExLjk5MjhDNTAuMDIgMTMuMDE0OCA1MC4xNjUgMTQuMTQ4NiA1MC4xNjUgMTUuNDEwMVYyMy4yMTg4QzUwLjE2NSAyNS4yMzA5IDUwLjI3NzggMjYuODkxNiA1MC41MTk0IDI4LjIwMTFINDUuNDkzM0M0NS4zODA1IDI3LjUxNDQgNDUuMzMyMiAyNi43NDc5IDQ1LjMzMjIgMjUuODg1NlYyNC44Nzk2SDQ1LjNDNDQuMDkxOCAyNy40ODI1IDQxLjg2ODcgMjguNzc1OSAzOC42MzA3IDI4Ljc3NTlDMzYuMzU5MyAyOC43NzU5IDM0LjU1NSAyOC4xNjkxIDMzLjIzNCAyNi45NzE1QzMxLjkxMzEgMjUuNzU3OCAzMS4yNTI2IDI0LjI3MjcgMzEuMjUyNiAyMi40ODQzQzMxLjI1MjYgMjEuNzQ5NyAzMS4zNjUzIDIxLjA2MyAzMS42MDcgMjAuNDQwM0MzMS44NDg2IDE5LjgxNzUgMzIuMTM4NiAxOS4zMDY1IDMyLjUwOTEgMTguODc1M0MzMi44NjM1IDE4LjQ2MDEgMzMuMzMwNyAxOC4wNzY5IDMzLjg5NDUgMTcuNzQxNUMzNC40NTgzIDE3LjQwNjIgMzQuOTg5OSAxNy4xMzQ3IDM1LjUwNTUgMTYuOTQzMUMzNi4wMDQ4IDE2Ljc1MTUgMzYuNjAwOSAxNi41NTk4IDM3LjI5MzYgMTYuNDAwMkMzNy45ODYzIDE2LjI0MDUgMzguNTUwMSAxNi4xMTI3IDM5LjAwMTIgMTYuMDQ4OUMzOS40NTIzIDE1Ljk2OSAzOS45ODM5IDE1LjkwNTEgNDAuNTc5OSAxNS44MjUzQzQwLjkxODIgMTUuNzkzMyA0MS4xNTk5IDE1Ljc0NTQgNDEuMzA0OCAxNS43Mjk1QzQyLjc1NDcgMTUuNTIxOSA0My43ODU3IDE1LjIzNDQgNDQuMzgxNyAxNC44NjcyQzQ0Ljk3NzggMTQuNDk5OSA0NS4yODM5IDEzLjkwOSA0NS4yODM5IDEzLjA2MjdDNDUuMjgzOSAxMi4yMzIzIDQ0LjkyOTUgMTEuNTc3NiA0NC4yMjA2IDExLjA5ODVDNDMuNTExOCAxMC42MTk1IDQyLjUyOTIgMTAuMzc5OSA0MS4yNzI2IDEwLjM3OTlDNDAuMTc3MiAxMC4zNzk5IDM5LjI1ODkgMTAuNjY3NCAzOC40ODU3IDExLjI1ODJDMzcuNzEyNCAxMS44NDkxIDM3LjIxMzEgMTIuNjQ3NSAzNi45MzkyIDEzLjY2OTVIMzIuMjM1MlYxMy42NTM1Wk0zNy4yMTMgMjAuMzI4NUMzNi41MjAzIDIwLjgwNzUgMzYuMTgyIDIxLjQ2MjMgMzYuMTgyIDIyLjI3NjdDMzYuMTgyIDIzLjA5MTEgMzYuNTIwMyAyMy43NjE3IDM3LjE4MDggMjQuMjcyN0MzNy44NDEzIDI0Ljc4MzcgMzguNzc1NyAyNS4wMzkyIDM5Ljk1MTcgMjUuMDM5MkM0MC42NzY2IDI1LjAzOTIgNDEuMzUzMiAyNC45Mjc1IDQxLjk4MTQgMjQuNjg3OUM0Mi41OTM2IDI0LjQ2NDQgNDMuMTczNSAyNC4wOTcxIDQzLjY4OSAyMy42MDIxQzQ0LjIwNDUgMjMuMTA3IDQ0LjYwNzMgMjIuNDIwNCA0NC45MTM0IDIxLjU1ODFDNDUuMjAzMyAyMC42Nzk4IDQ1LjM0ODMgMTkuNjU3OCA0NS4zNDgzIDE4LjQ3NjFWMTYuNTQzOUM0NS4wNzQ0IDE3LjE1MDcgNDQuNTU4OSAxNy42Nzc3IDQzLjgzNCAxOC4xMDg4QzQzLjEwOTEgMTguNTQgNDEuOTY1MyAxOC45MDczIDQwLjQzNDkgMTkuMjEwN0MzOC45ODUxIDE5LjQ2NjIgMzcuOTA1OCAxOS44NDk0IDM3LjIxMyAyMC4zMjg1WiIgZmlsbD0iIzIyNDcyMiIvPgo8cGF0aCBkPSJNNTMuMjczNiAyOC4xODUyVjcuMjM0Mkg1OC4xODdWMTAuODkxQzU5LjUwOCA4LjA4MDU0IDYxLjYxODMgNi42NzUyOSA2NC41MTggNi42NzUyOUM2Ny4xMjc3IDYuNjc1MjkgNjkuMDQ0NyA3LjQ0MTc5IDcwLjI2OTEgOC45NzQ3OUM3MS40OTM0IDEwLjUwNzggNzIuMTIxNiAxMi41ODM3IDcyLjEyMTYgMTUuMjE4NlYyOC4xNjkySDY3LjE3NlYxNi4zMzY0QzY3LjE3NiAxMi43NDM0IDY1Ljg1NTEgMTAuOTU0OSA2My4yMjkyIDEwLjk1NDlDNjEuNzMxMSAxMC45NTQ5IDYwLjU1NTEgMTEuNjA5NiA1OS42NTI5IDEyLjkwMzFDNTguNzY2OSAxNC4xOTY2IDU4LjMxNTkgMTYuMTEyOCA1OC4zMTU5IDE4LjYwMzlWMjguMTUzMkg1My4yNzM2VjI4LjE4NTJaIiBmaWxsPSIjMjI0NzIyIi8+CjxwYXRoIGQ9Ik04MS4yMjM5IDIwLjY0NzVDODEuMjIzOSAyMS44OTMgODEuNDE3MiAyMi44MTkyIDgxLjgyIDIzLjQxQzgyLjIwNjYgMjQuMDAwOSA4Mi45MzE1IDI0LjI4ODMgODMuOTYyNSAyNC4yODgzSDg1LjMxNTdWMjguMjY0NUg4Mi44OTkzQzgxLjY3NSAyOC4yODA1IDgwLjYyNzkgMjguMTIwOCA3OS43NTggMjcuNzg1NUM3OC44ODgxIDI3LjQ1MDEgNzguMjExNSAyNi45NzExIDc3LjcxMjEgMjYuMzE2NEM3Ny4yMTI3IDI1LjY3NzYgNzYuODU4MyAyNC45NDMgNzYuNjQ4OSAyNC4xMTI3Qzc2LjQyMzMgMjMuMjk4MyA3Ni4zMjY3IDIyLjM1NjEgNzYuMzI2NyAyMS4yODYyVjExLjA1MDJINzMuODQ1OFY3LjIzMzcySDc2LjMyNjdWMS4zODkxNkg4MS4yNFY3LjIzMzcySDg1LjQxMjRWMTEuMDUwMkg4MS4yNFYyMC42NDc1SDgxLjIyMzlaIiBmaWxsPSIjMjI0NzIyIi8+CjxwYXRoIGQ9Ik04Ny42OTk1IDEzLjY1MzVDODcuODQ0NSAxMi43NzUzIDg4LjEzNDQgMTEuOTI4OSA4OC41ODU1IDExLjExNDVDODkuMDIwNSAxMC4zMDAxIDg5LjYwMDQgOS41NDk1OCA5MC4zMDkyIDguODYyOTJDOTEuMDE4IDguMTc2MjYgOTEuOTIwMSA3LjYxNzM2IDkzLjAxNTYgNy4yMTgxNEM5NC4xMTEgNi44MDI5NSA5NS4zMTkyIDYuNjExMzMgOTYuNjQwMiA2LjYxMTMzQzk4LjI4MzQgNi42MTEzMyA5OS43MTcxIDYuODM0ODkgMTAwLjkwOSA3LjI5Nzk4QzEwMi4xMDEgNy43NDUxMSAxMDMuMDM2IDguMzk5ODMgMTAzLjcxMiA5LjIzMDJDMTA0LjM4OSAxMC4wNjA2IDEwNC44NzIgMTAuOTg2OCAxMDUuMTc4IDExLjk5MjhDMTA1LjQ4NCAxMy4wMTQ4IDEwNS42MjkgMTQuMTQ4NiAxMDUuNjI5IDE1LjQxMDFWMjMuMjE4OEMxMDUuNjI5IDI1LjIzMDkgMTA1Ljc0MiAyNi44OTE2IDEwNS45ODQgMjguMjAxMUgxMDAuOTU4QzEwMC44NDUgMjcuNTE0NCAxMDAuNzk2IDI2Ljc0NzkgMTAwLjc5NiAyNS44ODU2VjI0Ljg3OTZIMTAwLjc2NEM5OS41NTYgMjcuNDgyNSA5Ny4zMzI5IDI4Ljc3NTkgOTQuMDk0OSAyOC43NzU5QzkxLjgyMzUgMjguNzc1OSA5MC4wMTkyIDI4LjE2OTEgODguNjk4MyAyNi45NzE1Qzg3LjM3NzMgMjUuNzU3OCA4Ni43MTY4IDI0LjI3MjcgODYuNzE2OCAyMi40ODQzQzg2LjcxNjggMjEuNzQ5NyA4Ni44Mjk2IDIxLjA2MyA4Ny4wNzEyIDIwLjQ0MDNDODcuMzEyOCAxOS44MTc1IDg3LjYwMjggMTkuMzA2NSA4Ny45NzMzIDE4Ljg3NTNDODguMzI3NyAxOC40NjAxIDg4Ljc5NDkgMTguMDc2OSA4OS4zNTg3IDE3Ljc0MTVDODkuOTIyNiAxNy40MDYyIDkwLjQ1NDIgMTcuMTM0NyA5MC45Njk3IDE2Ljk0MzFDOTEuNDY5MSAxNi43NTE1IDkyLjA2NTEgMTYuNTU5OCA5Mi43NTc4IDE2LjQwMDJDOTMuNDUwNSAxNi4yNDA1IDk0LjAxNDQgMTYuMTEyNyA5NC40NjU0IDE2LjA0ODlDOTQuOTE2NSAxNS45NjkgOTUuNDQ4MSAxNS45MDUxIDk2LjA0NDIgMTUuODI1M0M5Ni4zODI1IDE1Ljc5MzMgOTYuNjI0MSAxNS43NDU0IDk2Ljc2OTEgMTUuNzI5NUM5OC4yMTg5IDE1LjUyMTkgOTkuMjQ5OSAxNS4yMzQ0IDk5Ljg0NiAxNC44NjcyQzEwMC40NDIgMTQuNDk5OSAxMDAuNzQ4IDEzLjkwOSAxMDAuNzQ4IDEzLjA2MjdDMTAwLjc0OCAxMi4yMzIzIDEwMC4zOTQgMTEuNTc3NiA5OS42ODQ5IDExLjA5ODVDOTguOTc2MSAxMC42MTk1IDk3Ljk5MzQgMTAuMzc5OSA5Ni43MzY5IDEwLjM3OTlDOTUuNjQxNCAxMC4zNzk5IDk0LjcyMzIgMTAuNjY3NCA5My45NDk5IDExLjI1ODJDOTMuMTc2NyAxMS44NDkxIDkyLjY3NzMgMTIuNjQ3NSA5Mi40MDM0IDEzLjY2OTVIODcuNjk5NVYxMy42NTM1Wk05Mi42NzczIDIwLjMyODVDOTEuOTg0NiAyMC44MDc1IDkxLjY0NjMgMjEuNDYyMyA5MS42NDYzIDIyLjI3NjdDOTEuNjQ2MyAyMy4wOTExIDkxLjk4NDYgMjMuNzYxNyA5Mi42NDUxIDI0LjI3MjdDOTMuMzA1NiAyNC43ODM3IDk0LjIzOTkgMjUuMDM5MiA5NS40MTU5IDI1LjAzOTJDOTYuMTQwOCAyNS4wMzkyIDk2LjgxNzQgMjQuOTI3NSA5Ny40NDU3IDI0LjY4NzlDOTguMDU3OCAyNC40NjQ0IDk4LjYzNzggMjQuMDk3MSA5OS4xNTMzIDIzLjYwMjFDOTkuNjY4OCAyMy4xMDcgMTAwLjA3MiAyMi40MjA0IDEwMC4zNzggMjEuNTU4MUMxMDAuNjY4IDIwLjY3OTggMTAwLjgxMyAxOS42NTc4IDEwMC44MTMgMTguNDc2MVYxNi41NDM5QzEwMC41MzkgMTcuMTUwNyAxMDAuMDIzIDE3LjY3NzcgOTkuMjk4MyAxOC4xMDg4Qzk4LjU3MzMgMTguNTQgOTcuNDI5NiAxOC45MDczIDk1Ljg5OTIgMTkuMjEwN0M5NC40MzMyIDE5LjQ2NjIgOTMuMzUzOSAxOS44NDk0IDkyLjY3NzMgMjAuMzI4NVoiIGZpbGw9IiMyMjQ3MjIiLz4KPHBhdGggZD0iTTE4LjEzOTIgMi41MjMwNkMxNi4yMDYxIDAuODQ2MzQzIDEzLjY0NDcgMCAxMC40NTUgMEgwVjI4LjE4NDhIMC45OTg3ODRDMy4zMzQ2NSAyOC4xODQ4IDUuMjE5NDUgMjYuMzAwNSA1LjIxOTQ1IDI0LjAwMVYxOC4xODg0VjEzLjg5MjhWNC4yOTU1OUgxMC4wMzYyQzExLjg1NjUgNC4yOTU1OSAxMy4yOTAzIDQuNjk0ODEgMTQuMzA1MiA1LjQ3NzI4QzE1LjMzNjIgNi4yNzU3MSAxNS44MzU2IDcuNDQxNDMgMTUuODM1NiA5LjAyMjM0QzE1LjgzNTYgMTAuNTg3MyAxNS4zMDQgMTEuODAwOSAxNC4yNDA3IDEyLjYzMTNDMTMuMTc3NSAxMy40NjE2IDExLjc0MzggMTMuODkyOCA5LjkyMzQgMTMuODkyOEM4LjEzNTI2IDEzLjg5MjggNi42ODU0MSAxNS4zMyA2LjY4NTQxIDE3LjEwMjVWMTguMTg4NEgxMC4zNTg0QzEyLjMzOTggMTguMTg4NCAxNC4xNDQxIDE3Ljc4OTIgMTUuNzg3MiAxNi45NzQ4QzE3LjQzMDQgMTYuMTc2MyAxOC43MDMgMTUuMDU4NSAxOS42NTM1IDEzLjY1MzNDMjAuNTg3OCAxMi4yNDggMjEuMDU1IDEwLjY2NzEgMjEuMDU1IDguOTQyNDlDMjEuMDM4OSA2LjMzOTU5IDIwLjA3MjMgNC4xOTk3OCAxOC4xMzkyIDIuNTIzMDZaIiBmaWxsPSIjMjI0NzIyIi8+CjwvZz4KPGRlZnM+CjxjbGlwUGF0aCBpZD0iY2xpcDBfMV80NjIiPgo8cmVjdCB3aWR0aD0iMTA2IiBoZWlnaHQ9IjI4Ljc1OTciIGZpbGw9IndoaXRlIi8+CjwvY2xpcFBhdGg+CjwvZGVmcz4KPC9zdmc+Cg==" />
+    <meta property="og:locale" content="en_US" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@planta" />
+    <meta name="twitter:title" content="Plant care app - Keep your plants alive | Planta" />
+    <meta name="twitter:description" content="Individual care schedule and reminders for your plants, recommendations, step by step guides, identification, light meter and more. Keep your plants alive with Planta!" />
+    <meta name="twitter:image" content="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTA2IiBoZWlnaHQ9IjI5IiB2aWV3Qm94PSIwIDAgMTA2IDI5IiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8ZyBjbGlwLXBhdGg9InVybCgjY2xpcDBfMV80NjIpIj4KPHBhdGggZD0iTTIzLjU5OTcgMEgyOC42MjU4VjI4LjE4NDhIMjMuNTk5N1YwWiIgZmlsbD0iIzIyNDcyMiIvPgo8cGF0aCBkPSJNMzIuMjM1MiAxMy42NTM1QzMyLjM4MDIgMTIuNzc1MyAzMi42NzAyIDExLjkyODkgMzMuMTIxMyAxMS4xMTQ1QzMzLjU1NjIgMTAuMzAwMSAzNC4xMzYyIDkuNTQ5NTggMzQuODQ1IDguODYyOTJDMzUuNTUzOCA4LjE3NjI2IDM2LjQ1NTkgNy42MTczNiAzNy41NTEzIDcuMjE4MTRDMzguNjQ2OCA2LjgwMjk1IDM5Ljg1NSA2LjYxMTMzIDQxLjE3NiA2LjYxMTMzQzQyLjgxOTEgNi42MTEzMyA0NC4yNTI5IDYuODM0ODkgNDUuNDQ1IDcuMjk3OThDNDYuNjM3MSA3Ljc0NTExIDQ3LjU3MTQgOC4zOTk4MyA0OC4yNDggOS4yMzAyQzQ4LjkyNDYgMTAuMDYwNiA0OS40MDc5IDEwLjk4NjggNDkuNzE0IDExLjk5MjhDNTAuMDIgMTMuMDE0OCA1MC4xNjUgMTQuMTQ4NiA1MC4xNjUgMTUuNDEwMVYyMy4yMTg4QzUwLjE2NSAyNS4yMzA5IDUwLjI3NzggMjYuODkxNiA1MC41MTk0IDI4LjIwMTFINDUuNDkzM0M0NS4zODA1IDI3LjUxNDQgNDUuMzMyMiAyNi43NDc5IDQ1LjMzMjIgMjUuODg1NlYyNC44Nzk2SDQ1LjNDNDQuMDkxOCAyNy40ODI1IDQxLjg2ODcgMjguNzc1OSAzOC42MzA3IDI4Ljc3NTlDMzYuMzU5MyAyOC43NzU5IDM0LjU1NSAyOC4xNjkxIDMzLjIzNCAyNi45NzE1QzMxLjkxMzEgMjUuNzU3OCAzMS4yNTI2IDI0LjI3MjcgMzEuMjUyNiAyMi40ODQzQzMxLjI1MjYgMjEuNzQ5NyAzMS4zNjUzIDIxLjA2MyAzMS42MDcgMjAuNDQwM0MzMS44NDg2IDE5LjgxNzUgMzIuMTM4NiAxOS4zMDY1IDMyLjUwOTEgMTguODc1M0MzMi44NjM1IDE4LjQ2MDEgMzMuMzMwNyAxOC4wNzY5IDMzLjg5NDUgMTcuNzQxNUMzNC40NTgzIDE3LjQwNjIgMzQuOTg5OSAxNy4xMzQ3IDM1LjUwNTUgMTYuOTQzMUMzNi4wMDQ4IDE2Ljc1MTUgMzYuNjAwOSAxNi41NTk4IDM3LjI5MzYgMTYuNDAwMkMzNy45ODYzIDE2LjI0MDUgMzguNTUwMSAxNi4xMTI3IDM5LjAwMTIgMTYuMDQ4OUMzOS40NTIzIDE1Ljk2OSAzOS45ODM5IDE1LjkwNTEgNDAuNTc5OSAxNS44MjUzQzQwLjkxODIgMTUuNzkzMyA0MS4xNTk5IDE1Ljc0NTQgNDEuMzA0OCAxNS43Mjk1QzQyLjc1NDcgMTUuNTIxOSA0My43ODU3IDE1LjIzNDQgNDQuMzgxNyAxNC44NjcyQzQ0Ljk3NzggMTQuNDk5OSA0NS4yODM5IDEzLjkwOSA0NS4yODM5IDEzLjA2MjdDNDUuMjgzOSAxMi4yMzIzIDQ0LjkyOTUgMTEuNTc3NiA0NC4yMjA2IDExLjA5ODVDNDMuNTExOCAxMC42MTk1IDQyLjUyOTIgMTAuMzc5OSA0MS4yNzI2IDEwLjM3OTlDNDAuMTc3MiAxMC4zNzk5IDM5LjI1ODkgMTAuNjY3NCAzOC40ODU3IDExLjI1ODJDMzcuNzEyNCAxMS44NDkxIDM3LjIxMzEgMTIuNjQ3NSAzNi45MzkyIDEzLjY2OTVIMzIuMjM1MlYxMy42NTM1Wk0zNy4yMTMgMjAuMzI4NUMzNi41MjAzIDIwLjgwNzUgMzYuMTgyIDIxLjQ2MjMgMzYuMTgyIDIyLjI3NjdDMzYuMTgyIDIzLjA5MTEgMzYuNTIwMyAyMy43NjE3IDM3LjE4MDggMjQuMjcyN0MzNy44NDEzIDI0Ljc4MzcgMzguNzc1NyAyNS4wMzkyIDM5Ljk1MTcgMjUuMDM5MkM0MC42NzY2IDI1LjAzOTIgNDEuMzUzMiAyNC45Mjc1IDQxLjk4MTQgMjQuNjg3OUM0Mi41OTM2IDI0LjQ2NDQgNDMuMTczNSAyNC4wOTcxIDQzLjY4OSAyMy42MDIxQzQ0LjIwNDUgMjMuMTA3IDQ0LjYwNzMgMjIuNDIwNCA0NC45MTM0IDIxLjU1ODFDNDUuMjAzMyAyMC42Nzk4IDQ1LjM0ODMgMTkuNjU3OCA0NS4zNDgzIDE4LjQ3NjFWMTYuNTQzOUM0NS4wNzQ0IDE3LjE1MDcgNDQuNTU4OSAxNy42Nzc3IDQzLjgzNCAxOC4xMDg4QzQzLjEwOTEgMTguNTQgNDEuOTY1MyAxOC45MDczIDQwLjQzNDkgMTkuMjEwN0MzOC45ODUxIDE5LjQ2NjIgMzcuOTA1OCAxOS44NDk0IDM3LjIxMyAyMC4zMjg1WiIgZmlsbD0iIzIyNDcyMiIvPgo8cGF0aCBkPSJNNTMuMjczNiAyOC4xODUyVjcuMjM0Mkg1OC4xODdWMTAuODkxQzU5LjUwOCA4LjA4MDU0IDYxLjYxODMgNi42NzUyOSA2NC41MTggNi42NzUyOUM2Ny4xMjc3IDYuNjc1MjkgNjkuMDQ0NyA3LjQ0MTc5IDcwLjI2OTEgOC45NzQ3OUM3MS40OTM0IDEwLjUwNzggNzIuMTIxNiAxMi41ODM3IDcyLjEyMTYgMTUuMjE4NlYyOC4xNjkySDY3LjE3NlYxNi4zMzY0QzY3LjE3NiAxMi43NDM0IDY1Ljg1NTEgMTAuOTU0OSA2My4yMjkyIDEwLjk1NDlDNjEuNzMxMSAxMC45NTQ5IDYwLjU1NTEgMTEuNjA5NiA1OS42NTI5IDEyLjkwMzFDNTguNzY2OSAxNC4xOTY2IDU4LjMxNTkgMTYuMTEyOCA1OC4zMTU5IDE4LjYwMzlWMjguMTUzMkg1My4yNzM2VjI4LjE4NTJaIiBmaWxsPSIjMjI0NzIyIi8+CjxwYXRoIGQ9Ik04MS4yMjM5IDIwLjY0NzVDODEuMjIzOSAyMS44OTMgODEuNDE3MiAyMi44MTkyIDgxLjgyIDIzLjQxQzgyLjIwNjYgMjQuMDAwOSA4Mi45MzE1IDI0LjI4ODMgODMuOTYyNSAyNC4yODgzSDg1LjMxNTdWMjguMjY0NUg4Mi44OTkzQzgxLjY3NSAyOC4yODA1IDgwLjYyNzkgMjguMTIwOCA3OS43NTggMjcuNzg1NUM3OC44ODgxIDI3LjQ1MDEgNzguMjExNSAyNi45NzExIDc3LjcxMjEgMjYuMzE2NEM3Ny4yMTI3IDI1LjY3NzYgNzYuODU4MyAyNC45NDMgNzYuNjQ4OSAyNC4xMTI3Qzc2LjQyMzMgMjMuMjk4MyA3Ni4zMjY3IDIyLjM1NjEgNzYuMzI2NyAyMS4yODYyVjExLjA1MDJINzMuODQ1OFY3LjIzMzcySDc2LjMyNjdWMS4zODkxNkg4MS4yNFY3LjIzMzcySDg1LjQxMjRWMTEuMDUwMkg4MS4yNFYyMC42NDc1SDgxLjIyMzlaIiBmaWxsPSIjMjI0NzIyIi8+CjxwYXRoIGQ9Ik04Ny42OTk1IDEzLjY1MzVDODcuODQ0NSAxMi43NzUzIDg4LjEzNDQgMTEuOTI4OSA4OC41ODU1IDExLjExNDVDODkuMDIwNSAxMC4zMDAxIDg5LjYwMDQgOS41NDk1OCA5MC4zMDkyIDguODYyOTJDOTEuMDE4IDguMTc2MjYgOTEuOTIwMSA3LjYxNzM2IDkzLjAxNTYgNy4yMTgxNEM5NC4xMTEgNi44MDI5NSA5NS4zMTkyIDYuNjExMzMgOTYuNjQwMiA2LjYxMTMzQzk4LjI4MzQgNi42MTEzMyA5OS43MTcxIDYuODM0ODkgMTAwLjkwOSA3LjI5Nzk4QzEwMi4xMDEgNy43NDUxMSAxMDMuMDM2IDguMzk5ODMgMTAzLjcxMiA5LjIzMDJDMTA0LjM4OSAxMC4wNjA2IDEwNC44NzIgMTAuOTg2OCAxMDUuMTc4IDExLjk5MjhDMTA1LjQ4NCAxMy4wMTQ4IDEwNS42MjkgMTQuMTQ4NiAxMDUuNjI5IDE1LjQxMDFWMjMuMjE4OEMxMDUuNjI5IDI1LjIzMDkgMTA1Ljc0MiAyNi44OTE2IDEwNS45ODQgMjguMjAxMUgxMDAuOTU4QzEwMC44NDUgMjcuNTE0NCAxMDAuNzk2IDI2Ljc0NzkgMTAwLjc5NiAyNS44ODU2VjI0Ljg3OTZIMTAwLjc2NEM5OS41NTYgMjcuNDgyNSA5Ny4zMzI5IDI4Ljc3NTkgOTQuMDk0OSAyOC43NzU5QzkxLjgyMzUgMjguNzc1OSA5MC4wMTkyIDI4LjE2OTEgODguNjk4MyAyNi45NzE1Qzg3LjM3NzMgMjUuNzU3OCA4Ni43MTY4IDI0LjI3MjcgODYuNzE2OCAyMi40ODQzQzg2LjcxNjggMjEuNzQ5NyA4Ni44Mjk2IDIxLjA2MyA4Ny4wNzEyIDIwLjQ0MDNDODcuMzEyOCAxOS44MTc1IDg3LjYwMjggMTkuMzA2NSA4Ny45NzMzIDE4Ljg3NTNDODguMzI3NyAxOC40NjAxIDg4Ljc5NDkgMTguMDc2OSA4OS4zNTg3IDE3Ljc0MTVDODkuOTIyNiAxNy40MDYyIDkwLjQ1NDIgMTcuMTM0NyA5MC45Njk3IDE2Ljk0MzFDOTEuNDY5MSAxNi43NTE1IDkyLjA2NTEgMTYuNTU5OCA5Mi43NTc4IDE2LjQwMDJDOTMuNDUwNSAxNi4yNDA1IDk0LjAxNDQgMTYuMTEyNyA5NC40NjU0IDE2LjA0ODlDOTQuOTE2NSAxNS45NjkgOTUuNDQ4MSAxNS45MDUxIDk2LjA0NDIgMTUuODI1M0M5Ni4zODI1IDE1Ljc5MzMgOTYuNjI0MSAxNS43NDU0IDk2Ljc2OTEgMTUuNzI5NUM5OC4yMTg5IDE1LjUyMTkgOTkuMjQ5OSAxNS4yMzQ0IDk5Ljg0NiAxNC44NjcyQzEwMC40NDIgMTQuNDk5OSAxMDAuNzQ4IDEzLjkwOSAxMDAuNzQ4IDEzLjA2MjdDMTAwLjc0OCAxMi4yMzIzIDEwMC4zOTQgMTEuNTc3NiA5OS42ODQ5IDExLjA5ODVDOTguOTc2MSAxMC42MTk1IDk3Ljk5MzQgMTAuMzc5OSA5Ni43MzY5IDEwLjM3OTlDOTUuNjQxNCAxMC4zNzk5IDk0LjcyMzIgMTAuNjY3NCA5My45NDk5IDExLjI1ODJDOTMuMTc2NyAxMS44NDkxIDkyLjY3NzMgMTIuNjQ3NSA5Mi40MDM0IDEzLjY2OTVIODcuNjk5NVYxMy42NTM1Wk05Mi42NzczIDIwLjMyODVDOTEuOTg0NiAyMC44MDc1IDkxLjY0NjMgMjEuNDYyMyA5MS42NDYzIDIyLjI3NjdDOTEuNjQ2MyAyMy4wOTExIDkxLjk4NDYgMjMuNzYxNyA5Mi42NDUxIDI0LjI3MjdDOTMuMzA1NiAyNC43ODM3IDk0LjIzOTkgMjUuMDM5MiA5NS40MTU5IDI1LjAzOTJDOTYuMTQwOCAyNS4wMzkyIDk2LjgxNzQgMjQuOTI3NSA5Ny40NDU3IDI0LjY4NzlDOTguMDU3OCAyNC40NjQ0IDk4LjYzNzggMjQuMDk3MSA5OS4xNTMzIDIzLjYwMjFDOTkuNjY4OCAyMy4xMDcgMTAwLjA3MiAyMi40MjA0IDEwMC4zNzggMjEuNTU4MUMxMDAuNjY4IDIwLjY3OTggMTAwLjgxMyAxOS42NTc4IDEwMC44MTMgMTguNDc2MVYxNi41NDM5QzEwMC41MzkgMTcuMTUwNyAxMDAuMDIzIDE3LjY3NzcgOTkuMjk4MyAxOC4xMDg4Qzk4LjU3MzMgMTguNTQgOTcuNDI5NiAxOC45MDczIDk1Ljg5OTIgMTkuMjEwN0M5NC40MzMyIDE5LjQ2NjIgOTMuMzUzOSAxOS44NDk0IDkyLjY3NzMgMjAuMzI4NVoiIGZpbGw9IiMyMjQ3MjIiLz4KPHBhdGggZD0iTTE4LjEzOTIgMi41MjMwNkMxNi4yMDYxIDAuODQ2MzQzIDEzLjY0NDcgMCAxMC40NTUgMEgwVjI4LjE4NDhIMC45OTg3ODRDMy4zMzQ2NSAyOC4xODQ4IDUuMjE5NDUgMjYuMzAwNSA1LjIxOTQ1IDI0LjAwMVYxOC4xODg0VjEzLjg5MjhWNC4yOTU1OUgxMC4wMzYyQzExLjg1NjUgNC4yOTU1OSAxMy4yOTAzIDQuNjk0ODEgMTQuMzA1MiA1LjQ3NzI4QzE1LjMzNjIgNi4yNzU3MSAxNS44MzU2IDcuNDQxNDMgMTUuODM1NiA5LjAyMjM0QzE1LjgzNTYgMTAuNTg3MyAxNS4zMDQgMTEuODAwOSAxNC4yNDA3IDEyLjYzMTNDMTMuMTc3NSAxMy40NjE2IDExLjc0MzggMTMuODkyOCA5LjkyMzQgMTMuODkyOEM4LjEzNTI2IDEzLjg5MjggNi42ODU0MSAxNS4zMyA2LjY4NTQxIDE3LjEwMjVWMTguMTg4NEgxMC4zNTg0QzEyLjMzOTggMTguMTg4NCAxNC4xNDQxIDE3Ljc4OTIgMTUuNzg3MiAxNi45NzQ4QzE3LjQzMDQgMTYuMTc2MyAxOC43MDMgMTUuMDU4NSAxOS42NTM1IDEzLjY1MzNDMjAuNTg3OCAxMi4yNDggMjEuMDU1IDEwLjY2NzEgMjEuMDU1IDguOTQyNDlDMjEuMDM4OSA2LjMzOTU5IDIwLjA3MjMgNC4xOTk3OCAxOC4xMzkyIDIuNTIzMDZaIiBmaWxsPSIjMjI0NzIyIi8+CjwvZz4KPGRlZnM+CjxjbGlwUGF0aCBpZD0iY2xpcDBfMV80NjIiPgo8cmVjdCB3aWR0aD0iMTA2IiBoZWlnaHQ9IjI4Ljc1OTciIGZpbGw9IndoaXRlIi8+CjwvY2xpcFBhdGg+CjwvZGVmcz4KPC9zdmc+Cg==" />
+    <meta name="robots" content="index, follow" />
+    <meta name="googlebot" content="index, follow" />
+    <script type="application/ld+json">
+        {
+            & quot;
+            @context & quot;: & quot;
+            http: //schema.org/&quot;,&quot;@type&quot;:&quot;WebPage&quot;,&quot;headline&quot;:&quot;Plant care app - Keep your plants alive | Planta&quot;,&quot;description&quot;:&quot;Individual care schedule and reminders for your plants, recommendations, step by step guides, identification, light meter and more. Keep your plants alive with Planta!&quot;,&quot;image&quot;:&quot;data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTA2IiBoZWlnaHQ9IjI5IiB2aWV3Qm94PSIwIDAgMTA2IDI5IiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8ZyBjbGlwLXBhdGg9InVybCgjY2xpcDBfMV80NjIpIj4KPHBhdGggZD0iTTIzLjU5OTcgMEgyOC42MjU4VjI4LjE4NDhIMjMuNTk5N1YwWiIgZmlsbD0iIzIyNDcyMiIvPgo8cGF0aCBkPSJNMzIuMjM1MiAxMy42NTM1QzMyLjM4MDIgMTIuNzc1MyAzMi42NzAyIDExLjkyODkgMzMuMTIxMyAxMS4xMTQ1QzMzLjU1NjIgMTAuMzAwMSAzNC4xMzYyIDkuNTQ5NTggMzQuODQ1IDguODYyOTJDMzUuNTUzOCA4LjE3NjI2IDM2LjQ1NTkgNy42MTczNiAzNy41NTEzIDcuMjE4MTRDMzguNjQ2OCA2LjgwMjk1IDM5Ljg1NSA2LjYxMTMzIDQxLjE3NiA2LjYxMTMzQzQyLjgxOTEgNi42MTEzMyA0NC4yNTI5IDYuODM0ODkgNDUuNDQ1IDcuMjk3OThDNDYuNjM3MSA3Ljc0NTExIDQ3LjU3MTQgOC4zOTk4MyA0OC4yNDggOS4yMzAyQzQ4LjkyNDYgMTAuMDYwNiA0OS40MDc5IDEwLjk4NjggNDkuNzE0IDExLjk5MjhDNTAuMDIgMTMuMDE0OCA1MC4xNjUgMTQuMTQ4NiA1MC4xNjUgMTUuNDEwMVYyMy4yMTg4QzUwLjE2NSAyNS4yMzA5IDUwLjI3NzggMjYuODkxNiA1MC41MTk0IDI4LjIwMTFINDUuNDkzM0M0NS4zODA1IDI3LjUxNDQgNDUuMzMyMiAyNi43NDc5IDQ1LjMzMjIgMjUuODg1NlYyNC44Nzk2SDQ1LjNDNDQuMDkxOCAyNy40ODI1IDQxLjg2ODcgMjguNzc1OSAzOC42MzA3IDI4Ljc3NTlDMzYuMzU5MyAyOC43NzU5IDM0LjU1NSAyOC4xNjkxIDMzLjIzNCAyNi45NzE1QzMxLjkxMzEgMjUuNzU3OCAzMS4yNTI2IDI0LjI3MjcgMzEuMjUyNiAyMi40ODQzQzMxLjI1MjYgMjEuNzQ5NyAzMS4zNjUzIDIxLjA2MyAzMS42MDcgMjAuNDQwM0MzMS44NDg2IDE5LjgxNzUgMzIuMTM4NiAxOS4zMDY1IDMyLjUwOTEgMTguODc1M0MzMi44NjM1IDE4LjQ2MDEgMzMuMzMwNyAxOC4wNzY5IDMzLjg5NDUgMTcuNzQxNUMzNC40NTgzIDE3LjQwNjIgMzQuOTg5OSAxNy4xMzQ3IDM1LjUwNTUgMTYuOTQzMUMzNi4wMDQ4IDE2Ljc1MTUgMzYuNjAwOSAxNi41NTk4IDM3LjI5MzYgMTYuNDAwMkMzNy45ODYzIDE2LjI0MDUgMzguNTUwMSAxNi4xMTI3IDM5LjAwMTIgMTYuMDQ4OUMzOS40NTIzIDE1Ljk2OSAzOS45ODM5IDE1LjkwNTEgNDAuNTc5OSAxNS44MjUzQzQwLjkxODIgMTUuNzkzMyA0MS4xNTk5IDE1Ljc0NTQgNDEuMzA0OCAxNS43Mjk1QzQyLjc1NDcgMTUuNTIxOSA0My43ODU3IDE1LjIzNDQgNDQuMzgxNyAxNC44NjcyQzQ0Ljk3NzggMTQuNDk5OSA0NS4yODM5IDEzLjkwOSA0NS4yODM5IDEzLjA2MjdDNDUuMjgzOSAxMi4yMzIzIDQ0LjkyOTUgMTEuNTc3NiA0NC4yMjA2IDExLjA5ODVDNDMuNTExOCAxMC42MTk1IDQyLjUyOTIgMTAuMzc5OSA0MS4yNzI2IDEwLjM3OTlDNDAuMTc3MiAxMC4zNzk5IDM5LjI1ODkgMTAuNjY3NCAzOC40ODU3IDExLjI1ODJDMzcuNzEyNCAxMS44NDkxIDM3LjIxMzEgMTIuNjQ3NSAzNi45MzkyIDEzLjY2OTVIMzIuMjM1MlYxMy42NTM1Wk0zNy4yMTMgMjAuMzI4NUMzNi41MjAzIDIwLjgwNzUgMzYuMTgyIDIxLjQ2MjMgMzYuMTgyIDIyLjI3NjdDMzYuMTgyIDIzLjA5MTEgMzYuNTIwMyAyMy43NjE3IDM3LjE4MDggMjQuMjcyN0MzNy44NDEzIDI0Ljc4MzcgMzguNzc1NyAyNS4wMzkyIDM5Ljk1MTcgMjUuMDM5MkM0MC42NzY2IDI1LjAzOTIgNDEuMzUzMiAyNC45Mjc1IDQxLjk4MTQgMjQuNjg3OUM0Mi41OTM2IDI0LjQ2NDQgNDMuMTczNSAyNC4wOTcxIDQzLjY4OSAyMy42MDIxQzQ0LjIwNDUgMjMuMTA3IDQ0LjYwNzMgMjIuNDIwNCA0NC45MTM0IDIxLjU1ODFDNDUuMjAzMyAyMC42Nzk4IDQ1LjM0ODMgMTkuNjU3OCA0NS4zNDgzIDE4LjQ3NjFWMTYuNTQzOUM0NS4wNzQ0IDE3LjE1MDcgNDQuNTU4OSAxNy42Nzc3IDQzLjgzNCAxOC4xMDg4QzQzLjEwOTEgMTguNTQgNDEuOTY1MyAxOC45MDczIDQwLjQzNDkgMTkuMjEwN0MzOC45ODUxIDE5LjQ2NjIgMzcuOTA1OCAxOS44NDk0IDM3LjIxMyAyMC4zMjg1WiIgZmlsbD0iIzIyNDcyMiIvPgo8cGF0aCBkPSJNNTMuMjczNiAyOC4xODUyVjcuMjM0Mkg1OC4xODdWMTAuODkxQzU5LjUwOCA4LjA4MDU0IDYxLjYxODMgNi42NzUyOSA2NC41MTggNi42NzUyOUM2Ny4xMjc3IDYuNjc1MjkgNjkuMDQ0NyA3LjQ0MTc5IDcwLjI2OTEgOC45NzQ3OUM3MS40OTM0IDEwLjUwNzggNzIuMTIxNiAxMi41ODM3IDcyLjEyMTYgMTUuMjE4NlYyOC4xNjkySDY3LjE3NlYxNi4zMzY0QzY3LjE3NiAxMi43NDM0IDY1Ljg1NTEgMTAuOTU0OSA2My4yMjkyIDEwLjk1NDlDNjEuNzMxMSAxMC45NTQ5IDYwLjU1NTEgMTEuNjA5NiA1OS42NTI5IDEyLjkwMzFDNTguNzY2OSAxNC4xOTY2IDU4LjMxNTkgMTYuMTEyOCA1OC4zMTU5IDE4LjYwMzlWMjguMTUzMkg1My4yNzM2VjI4LjE4NTJaIiBmaWxsPSIjMjI0NzIyIi8+CjxwYXRoIGQ9Ik04MS4yMjM5IDIwLjY0NzVDODEuMjIzOSAyMS44OTMgODEuNDE3MiAyMi44MTkyIDgxLjgyIDIzLjQxQzgyLjIwNjYgMjQuMDAwOSA4Mi45MzE1IDI0LjI4ODMgODMuOTYyNSAyNC4yODgzSDg1LjMxNTdWMjguMjY0NUg4Mi44OTkzQzgxLjY3NSAyOC4yODA1IDgwLjYyNzkgMjguMTIwOCA3OS43NTggMjcuNzg1NUM3OC44ODgxIDI3LjQ1MDEgNzguMjExNSAyNi45NzExIDc3LjcxMjEgMjYuMzE2NEM3Ny4yMTI3IDI1LjY3NzYgNzYuODU4MyAyNC45NDMgNzYuNjQ4OSAyNC4xMTI3Qzc2LjQyMzMgMjMuMjk4MyA3Ni4zMjY3IDIyLjM1NjEgNzYuMzI2NyAyMS4yODYyVjExLjA1MDJINzMuODQ1OFY3LjIzMzcySDc2LjMyNjdWMS4zODkxNkg4MS4yNFY3LjIzMzcySDg1LjQxMjRWMTEuMDUwMkg4MS4yNFYyMC42NDc1SDgxLjIyMzlaIiBmaWxsPSIjMjI0NzIyIi8+CjxwYXRoIGQ9Ik04Ny42OTk1IDEzLjY1MzVDODcuODQ0NSAxMi43NzUzIDg4LjEzNDQgMTEuOTI4OSA4OC41ODU1IDExLjExNDVDODkuMDIwNSAxMC4zMDAxIDg5LjYwMDQgOS41NDk1OCA5MC4zMDkyIDguODYyOTJDOTEuMDE4IDguMTc2MjYgOTEuOTIwMSA3LjYxNzM2IDkzLjAxNTYgNy4yMTgxNEM5NC4xMTEgNi44MDI5NSA5NS4zMTkyIDYuNjExMzMgOTYuNjQwMiA2LjYxMTMzQzk4LjI4MzQgNi42MTEzMyA5OS43MTcxIDYuODM0ODkgMTAwLjkwOSA3LjI5Nzk4QzEwMi4xMDEgNy43NDUxMSAxMDMuMDM2IDguMzk5ODMgMTAzLjcxMiA5LjIzMDJDMTA0LjM4OSAxMC4wNjA2IDEwNC44NzIgMTAuOTg2OCAxMDUuMTc4IDExLjk5MjhDMTA1LjQ4NCAxMy4wMTQ4IDEwNS42MjkgMTQuMTQ4NiAxMDUuNjI5IDE1LjQxMDFWMjMuMjE4OEMxMDUuNjI5IDI1LjIzMDkgMTA1Ljc0MiAyNi44OTE2IDEwNS45ODQgMjguMjAxMUgxMDAuOTU4QzEwMC44NDUgMjcuNTE0NCAxMDAuNzk2IDI2Ljc0NzkgMTAwLjc5NiAyNS44ODU2VjI0Ljg3OTZIMTAwLjc2NEM5OS41NTYgMjcuNDgyNSA5Ny4zMzI5IDI4Ljc3NTkgOTQuMDk0OSAyOC43NzU5QzkxLjgyMzUgMjguNzc1OSA5MC4wMTkyIDI4LjE2OTEgODguNjk4MyAyNi45NzE1Qzg3LjM3NzMgMjUuNzU3OCA4Ni43MTY4IDI0LjI3MjcgODYuNzE2OCAyMi40ODQzQzg2LjcxNjggMjEuNzQ5NyA4Ni44Mjk2IDIxLjA2MyA4Ny4wNzEyIDIwLjQ0MDNDODcuMzEyOCAxOS44MTc1IDg3LjYwMjggMTkuMzA2NSA4Ny45NzMzIDE4Ljg3NTNDODguMzI3NyAxOC40NjAxIDg4Ljc5NDkgMTguMDc2OSA4OS4zNTg3IDE3Ljc0MTVDODkuOTIyNiAxNy40MDYyIDkwLjQ1NDIgMTcuMTM0NyA5MC45Njk3IDE2Ljk0MzFDOTEuNDY5MSAxNi43NTE1IDkyLjA2NTEgMTYuNTU5OCA5Mi43NTc4IDE2LjQwMDJDOTMuNDUwNSAxNi4yNDA1IDk0LjAxNDQgMTYuMTEyNyA5NC40NjU0IDE2LjA0ODlDOTQuOTE2NSAxNS45NjkgOTUuNDQ4MSAxNS45MDUxIDk2LjA0NDIgMTUuODI1M0M5Ni4zODI1IDE1Ljc5MzMgOTYuNjI0MSAxNS43NDU0IDk2Ljc2OTEgMTUuNzI5NUM5OC4yMTg5IDE1LjUyMTkgOTkuMjQ5OSAxNS4yMzQ0IDk5Ljg0NiAxNC44NjcyQzEwMC40NDIgMTQuNDk5OSAxMDAuNzQ4IDEzLjkwOSAxMDAuNzQ4IDEzLjA2MjdDMTAwLjc0OCAxMi4yMzIzIDEwMC4zOTQgMTEuNTc3NiA5OS42ODQ5IDExLjA5ODVDOTguOTc2MSAxMC42MTk1IDk3Ljk5MzQgMTAuMzc5OSA5Ni43MzY5IDEwLjM3OTlDOTUuNjQxNCAxMC4zNzk5IDk0LjcyMzIgMTAuNjY3NCA5My45NDk5IDExLjI1ODJDOTMuMTc2NyAxMS44NDkxIDkyLjY3NzMgMTIuNjQ3NSA5Mi40MDM0IDEzLjY2OTVIODcuNjk5NVYxMy42NTM1Wk05Mi42NzczIDIwLjMyODVDOTEuOTg0NiAyMC44MDc1IDkxLjY0NjMgMjEuNDYyMyA5MS42NDYzIDIyLjI3NjdDOTEuNjQ2MyAyMy4wOTExIDkxLjk4NDYgMjMuNzYxNyA5Mi42NDUxIDI0LjI3MjdDOTMuMzA1NiAyNC43ODM3IDk0LjIzOTkgMjUuMDM5MiA5NS40MTU5IDI1LjAzOTJDOTYuMTQwOCAyNS4wMzkyIDk2LjgxNzQgMjQuOTI3NSA5Ny40NDU3IDI0LjY4NzlDOTguMDU3OCAyNC40NjQ0IDk4LjYzNzggMjQuMDk3MSA5OS4xNTMzIDIzLjYwMjFDOTkuNjY4OCAyMy4xMDcgMTAwLjA3MiAyMi40MjA0IDEwMC4zNzggMjEuNTU4MUMxMDAuNjY4IDIwLjY3OTggMTAwLjgxMyAxOS42NTc4IDEwMC44MTMgMTguNDc2MVYxNi41NDM5QzEwMC41MzkgMTcuMTUwNyAxMDAuMDIzIDE3LjY3NzcgOTkuMjk4MyAxOC4xMDg4Qzk4LjU3MzMgMTguNTQgOTcuNDI5NiAxOC45MDczIDk1Ljg5OTIgMTkuMjEwN0M5NC40MzMyIDE5LjQ2NjIgOTMuMzUzOSAxOS44NDk0IDkyLjY3NzMgMjAuMzI4NVoiIGZpbGw9IiMyMjQ3MjIiLz4KPHBhdGggZD0iTTE4LjEzOTIgMi41MjMwNkMxNi4yMDYxIDAuODQ2MzQzIDEzLjY0NDcgMCAxMC40NTUgMEgwVjI4LjE4NDhIMC45OTg3ODRDMy4zMzQ2NSAyOC4xODQ4IDUuMjE5NDUgMjYuMzAwNSA1LjIxOTQ1IDI0LjAwMVYxOC4xODg0VjEzLjg5MjhWNC4yOTU1OUgxMC4wMzYyQzExLjg1NjUgNC4yOTU1OSAxMy4yOTAzIDQuNjk0ODEgMTQuMzA1MiA1LjQ3NzI4QzE1LjMzNjIgNi4yNzU3MSAxNS44MzU2IDcuNDQxNDMgMTUuODM1NiA5LjAyMjM0QzE1LjgzNTYgMTAuNTg3MyAxNS4zMDQgMTEuODAwOSAxNC4yNDA3IDEyLjYzMTNDMTMuMTc3NSAxMy40NjE2IDExLjc0MzggMTMuODkyOCA5LjkyMzQgMTMuODkyOEM4LjEzNTI2IDEzLjg5MjggNi42ODU0MSAxNS4zMyA2LjY4NTQxIDE3LjEwMjVWMTguMTg4NEgxMC4zNTg0QzEyLjMzOTggMTguMTg4NCAxNC4xNDQxIDE3Ljc4OTIgMTUuNzg3MiAxNi45NzQ4QzE3LjQzMDQgMTYuMTc2MyAxOC43MDMgMTUuMDU4NSAxOS42NTM1IDEzLjY1MzNDMjAuNTg3OCAxMi4yNDggMjEuMDU1IDEwLjY2NzEgMjEuMDU1IDguOTQyNDlDMjEuMDM4OSA2LjMzOTU5IDIwLjA3MjMgNC4xOTk3OCAxOC4xMzkyIDIuNTIzMDZaIiBmaWxsPSIjMjI0NzIyIi8+CjwvZz4KPGRlZnM+CjxjbGlwUGF0aCBpZD0iY2xpcDBfMV80NjIiPgo8cmVjdCB3aWR0aD0iMTA2IiBoZWlnaHQ9IjI4Ljc1OTciIGZpbGw9IndoaXRlIi8+CjwvY2xpcFBhdGg+CjwvZGVmcz4KPC9zdmc+Cg==&quot;}
+    </script>
+    <meta name="next-head-count" content="22" />
+    <script>
+        (function(w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })
+        (window, document, 'script', 'dataLayer', 'GTM-WTKWH96');
+    </script>
+    <script type="text/javascript">
+        try {
+            if (window.location.href.includes('theme=dark')) {
+                document.documentElement.classList.add('dark');
+                document.documentElement.style.colorScheme = 'dark';
+                document.documentElement.style.background = 'black';
+            }
+            if (window.location.href.includes('theme=light') || !window.location.seahrefrch.includes('theme')) {
+                document.documentElement.classList.add('light');
+                document.documentElement.style.colorScheme = 'light';
+                document.documentElement.style.background = '#F4F4F4';
+            }
+        } catch (ignore) {}
+    </script>
+    <meta name="next-font-preconnect" />
+    <link rel="preload" href="/_next/static/css/474351bf8bee13f7.css" as="style" />
+    <link rel="stylesheet" href="/_next/static/css/474351bf8bee13f7.css" data-n-g="" />
+    <noscript data-n-css=""></noscript>
+    <script defer="" nomodule="" src="/_next/static/chunks/polyfills-5cd94c89d3acac5f.js"></script>
+    <script defer="" src="/_next/static/chunks/800.7fed717106e4d888.js"></script>
+    <script defer="" src="/_next/static/chunks/933.6bc669de8e6ef64e.js"></script>
+    <script defer="" src="/_next/static/chunks/846.f0aed08e0fab178d.js"></script>
+    <script defer="" src="/_next/static/chunks/583.fc8de4e8054b29a5.js"></script>
+    <script defer="" src="/_next/static/chunks/330.4f8ed1523da5101f.js"></script>
+    <script defer="" src="/_next/static/chunks/116.4299efc4776c5161.js"></script>
+    <script defer="" src="/_next/static/chunks/984.5cf3265d7af9f998.js"></script>
+    <script src="/_next/static/chunks/webpack-e4e9993c7c4202ed.js" defer=""></script>
+    <script src="/_next/static/chunks/framework-fc97f3f1282ce3ed.js" defer=""></script>
+    <script src="/_next/static/chunks/main-1ee09cde0154ca11.js" defer=""></script>
+    <script src="/_next/static/chunks/pages/_app-b6d3b940459bb60a.js" defer=""></script>
+    <script src="/_next/static/chunks/478-bb62f0c76b3958d1.js" defer=""></script>
+    <script src="/_next/static/chunks/675-6195e5d2cc19482d.js" defer=""></script>
+    <script src="/_next/static/chunks/861-99f25def2aded5a4.js" defer=""></script>
+    <script src="/_next/static/chunks/pages/index-42f4bc88264efb17.js" defer="">
+    </script>
+    <script src="/_next/static/2jLp5v1QJubheRmbuwfBF/_buildManifest.js" defer=""></script>
+    <script src="/_next/static/2jLp5v1QJubheRmbuwfBF/_ssgManifest.js" defer=""></script>
+    <script src="/_next/static/2jLp5v1QJubheRmbuwfBF/_middlewareManifest.js" defer=""></script>
+</head>
+
+<body class="">
+    <div id="__next">
+        <main>
+            <header class="flex h-[72px] w-full items-center justify-end px-4 md:justify-between">
+                <ul class="hidden gap-4 sm:hidden md:flex">
+                    <li>
+                        <a class="text-base text-monstera hover:underline" target="_blank" href="https://getplanta.kb.help/">Support</a>
+                    </li>
+                </ul>
+                <div class="absolute left-1/2 z-50 h-[28px] w-[106px] -translate-x-1/2">
+                    <a class="relative" href="/"><svg width="106" height="29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#planta_svg__a)" fill="#224722">
+                                <path d="M23.6 0h5.026v28.185H23.6V0ZM32.235 13.653a7.832 7.832 0 0 1 .886-2.539 9.134 9.134 0 0 1 1.724-2.251c.709-.687 1.61-1.246 2.706-1.645 1.096-.415 2.304-.607 3.625-.607 1.643 0 3.077.224 4.269.687 1.192.447 2.126 1.102 2.803 1.932a8.037 8.037 0 0 1 1.466 2.763c.306 1.022.451 2.156.451 3.417v7.809c0 2.012.113 3.673.354 4.982h-5.026c-.113-.687-.16-1.453-.16-2.315V24.88H45.3c-1.208 2.603-3.431 3.896-6.67 3.896-2.27 0-4.075-.607-5.396-1.805-1.32-1.213-1.981-2.698-1.981-4.487 0-.734.112-1.421.354-2.044s.532-1.134.902-1.565a5.52 5.52 0 0 1 1.386-1.134 10.038 10.038 0 0 1 1.61-.798c.5-.192 1.096-.383 1.789-.543.692-.16 1.256-.287 1.707-.351.451-.08.983-.144 1.579-.224.338-.032.58-.08.725-.095 1.45-.208 2.48-.496 3.077-.863.596-.367.902-.958.902-1.804 0-.83-.355-1.485-1.063-1.965-.71-.479-1.692-.718-2.948-.718-1.096 0-2.014.287-2.787.878-.774.591-1.273 1.39-1.547 2.412h-4.704v-.017Zm4.978 6.675c-.693.48-1.031 1.134-1.031 1.949 0 .814.338 1.485.999 1.996.66.51 1.595.766 2.77.766.726 0 1.402-.112 2.03-.351a4.908 4.908 0 0 0 1.708-1.086c.516-.495.918-1.182 1.224-2.044.29-.878.435-1.9.435-3.082v-1.932c-.274.607-.79 1.134-1.514 1.565-.725.431-1.869.798-3.4 1.102-1.449.255-2.528.638-3.221 1.117ZM53.274 28.185V7.235h4.913v3.656c1.321-2.81 3.431-4.216 6.331-4.216 2.61 0 4.527.767 5.751 2.3 1.224 1.533 1.853 3.609 1.853 6.244v12.95h-4.946V16.336c0-3.593-1.32-5.381-3.947-5.381-1.498 0-2.674.655-3.576 1.948-.886 1.294-1.337 3.21-1.337 5.7v9.55h-5.042v.032ZM81.224 20.648c0 1.245.193 2.171.596 2.762.387.59 1.112.878 2.143.878h1.353v3.977h-2.417c-1.224.015-2.271-.144-3.141-.48-.87-.335-1.546-.814-2.046-1.469a5.858 5.858 0 0 1-1.063-2.203c-.226-.815-.322-1.757-.322-2.827V11.05h-2.481V7.234h2.48V1.389h4.914v5.845h4.172v3.816H81.24v9.598h-.016ZM87.7 13.653a7.832 7.832 0 0 1 .885-2.539 9.137 9.137 0 0 1 1.724-2.251c.709-.687 1.611-1.246 2.707-1.645 1.095-.415 2.303-.607 3.624-.607 1.643 0 3.077.224 4.269.687 1.192.447 2.127 1.102 2.803 1.932a8.028 8.028 0 0 1 1.466 2.763c.306 1.022.451 2.156.451 3.417v7.809c0 2.012.113 3.673.355 4.982h-5.026c-.113-.687-.162-1.453-.162-2.315V24.88h-.032c-1.208 2.603-3.431 3.896-6.67 3.896-2.27 0-4.075-.607-5.396-1.805-1.32-1.213-1.981-2.698-1.981-4.487 0-.734.113-1.421.354-2.044.242-.623.532-1.134.902-1.565a5.52 5.52 0 0 1 1.386-1.134 10.046 10.046 0 0 1 1.61-.798c.5-.192 1.096-.383 1.789-.543.693-.16 1.256-.287 1.707-.351.451-.08.983-.144 1.58-.224.337-.032.58-.08.724-.095 1.45-.208 2.48-.496 3.077-.863.596-.367.902-.958.902-1.804 0-.83-.354-1.485-1.063-1.965-.709-.479-1.692-.718-2.948-.718-1.096 0-2.014.287-2.787.878-.773.591-1.273 1.39-1.547 2.412H87.7v-.017Zm4.977 6.675c-.692.48-1.03 1.134-1.03 1.949 0 .814.338 1.485.998 1.996.66.51 1.595.766 2.77.766.726 0 1.402-.112 2.03-.351a4.909 4.909 0 0 0 1.708-1.086c.516-.495.919-1.182 1.225-2.044.29-.878.435-1.9.435-3.082v-1.932c-.274.607-.79 1.134-1.515 1.565-.725.431-1.868.798-3.399 1.102-1.466.255-2.545.638-3.222 1.117ZM18.14 2.523C16.205.846 13.644 0 10.454 0H0v28.185h.999c2.336 0 4.22-1.884 4.22-4.184V4.296h4.817c1.82 0 3.254.399 4.27 1.181 1.03.799 1.53 1.964 1.53 3.545 0 1.565-.532 2.779-1.595 3.61-1.063.83-2.497 1.26-4.318 1.26-1.788 0-3.238 1.438-3.238 3.21v1.086h3.673c1.982 0 3.786-.399 5.43-1.213 1.642-.799 2.915-1.917 3.866-3.322.934-1.405 1.401-2.986 1.401-4.71-.016-2.603-.983-4.743-2.916-6.42Z"></path>
+                            </g>
+                            <defs>
+                                <clipPath id="planta_svg__a">
+                                    <path fill="#fff" d="M0 0h106v28.76H0z"></path>
+                                </clipPath>
+                            </defs>
+                        </svg><span class="sr-only">Planta app</span></a></div><a target="_blank" rel="noreferer" class="hidden rounded-full border border-monstera px-4 py-1 text-base text-monstera transition-colors hover:bg-monsteraDarker hover:text-spearMint md:block" href="https://getplanta.page.link/ios">Get the app</a>
+                <nav class="block md:hidden">
+                    <button class="relative z-50 h-10 w-10 text-gray-500 focus:outline-none" area-label="Open main menu">
+                        <span class="sr-only">Open main menu</span>
+                        <div class="absolute left-1/2 top-1/2 block w-5 -translate-x-1/2 -translate-y-1/2 transform">
+                            <span aria-hidden="true" class="block absolute h-0.5 w-5 bg-monstera transform transition duration-400 ease-in-out -translate-y-1.5"></span>
+                            <span aria-hidden="true" class="block absolute h-0.5 w-5 bg-monstera transform transition duration-400 ease-in-out"></span>
+                            <span aria-hidden="true" class="block absolute h-0.5 w-5 bg-monstera transform transition duration-400 ease-in-out translate-y-1.5"></span>
+                        </div>
+                    </button>
+                </nav>
+            </header>
+            <div class="mx-auto max-w-[1140px] px-4">
+                <section class="grid gap-0 md:h-[calc(100vh-72px)] md:grid-cols-2 md:items-center md:gap-10">
+                    <div class="flex max-w-[600px] flex-col gap-5 pt-10 md:gap-10 md:pt-0">
+                        <h1 class="text-[40px] font-medium leading-[40px] text-monstera md:text-[64px] md:leading-[64px] lg:text-[110px] lg:leading-[99px]">Keep your plants alive</h1>
+                        <p class="text-base text-monstera md:text-xl">Individual care schedule and reminders for your plants, recommendations, step by step guides, identification, light meter and more. Keep your plants alive with Planta!</p>
+                        <div class="flex gap-4"><a target="_blank" rel="noreferer" class="relative" href="https://getplanta.page.link/ios">
+                                <span style="box-sizing:border-box;display:inline-block;overflow:hidden;width:156px;height:66px;background:none;opacity:1;border:0;margin:0;padding:0;position:relative">
+                                    <img alt="Planta on the app store" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" decoding="async" data-nimg="fixed" style="position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%" />
+                                    <noscript>
+                                        <img alt="Planta on the app store" srcSet="/icons/app-store-dark.svg 1x, /icons/app-store-dark.svg 2x" src="/icons/app-store-dark.svg" decoding="async" data-nimg="fixed" style="position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%" loading="lazy" />
+                                    </noscript></span>
+                            </a>
+                            <a target="_blank" rel="noreferer" class="relative" href="https://getplanta.page.link/android">
+                                <span style="box-sizing:border-box;display:inline-block;overflow:hidden;width:156px;height:66px;background:none;opacity:1;border:0;margin:0;padding:0;position:relative">
+                                    <img alt="Planta on google play" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" decoding="async" data-nimg="fixed" style="position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%" />
+                                    <noscript>
+                                        <img alt="Planta on google play" srcSet="/icons/google-play-dark.svg 1x, /icons/google-play-dark.svg 2x" src="/icons/google-play-dark.svg" decoding="async" data-nimg="fixed" style="position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%" loading="lazy" />
+                                    </noscript></span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="relative row-start-1 mt-7 h-[392px] w-[196px] justify-self-center md:row-start-auto md:h-[700px] md:w-[350px]">
+                        <span class="relative hidden h-full w-full md:block" area-hidden="true"><span class="absolute top-0 left-0 z-10 h-[144px] w-[144px] translate-y-[calc(350/100*40%)] -translate-x-[60%] rounded-full shadow-xl">
+                                <span class="block w-full h-full rounded-md" style="max-width:144px;max-height:144px"><img loading="lazy" src="/images/icons/planta-app-icon.svg" alt="Planta App" class="dynamic-image duration-1000 ease-in-out scale-105 blur-md grayscale" />
+                                </span></span><span class="absolute top-0 left-0 z-10 h-[77px] w-[206px] translate-y-[calc(350/100*145%)] translate-x-[120%] rounded-full shadow-xl">
+                                <span class="block w-full h-full rounded-md" style="max-width:206px;max-height:78px"><img loading="lazy" src="/images/icons/add-plant.svg" alt="Add plant" class="dynamic-image duration-1000 ease-in-out scale-105 blur-md grayscale" />
+                                </span></span><span class="absolute top-0 left-0 z-10 h-[76px] w-[389px] translate-y-[calc(350/100*215%)] translate-x-[15%] rounded-full shadow-xl">
+                                <span class="block w-full h-full rounded-md" style="max-width:389px;max-height:76px">
+                                    <img loading="lazy" src="/images/icons/app-menu.svg" alt="App menu" class="dynamic-image duration-1000 ease-in-out scale-105 blur-md grayscale" />
+                                </span>
+                            </span>
+                        </span>
+                        <span class="relative block h-full w-full md:hidden" area-hidden="true">
+                            <span class="absolute top-0 left-0 z-10 h-[80px] w-[80px] translate-y-[calc(350/100*40%)] -translate-x-[60%] rounded-full shadow-xl">
+                                <span class="block w-full h-full rounded-md" style="max-width:80px;max-height:80px">
+                                    <img loading="lazy" src="/images/icons/planta-app-icon.svg" alt="Planta app" class="dynamic-image duration-1000 ease-in-out scale-105 blur-md grayscale" />
+                                </span>
+                            </span>
+                            <span class="absolute top-0 left-0 z-10 h-[43px] w-[115px] translate-y-[calc(350/100*145%)] translate-x-[120%] rounded-full shadow-xl">
+                                <span class="block w-full h-full rounded-md" style="max-width:115px;max-height:43.5px"><img loading="lazy" src="/images/icons/add-plant.svg" alt="Add plant" class="dynamic-image duration-1000 ease-in-out scale-105 blur-md grayscale" />
+                                </span>
+                            </span>
+                            <span class="absolute top-0 left-0 z-10 h-[42px] w-[218px] translate-y-[calc(350/100*215%)] translate-x-[15%] rounded-full shadow-xl">
+                                <span class="block w-full h-full rounded-md" style="max-width:218px;max-height:42.5px">
+                                    <img loading="lazy" src="/images/icons/app-menu.svg" alt="app menu" class="dynamic-image duration-1000 ease-in-out scale-105 blur-md grayscale" />
+                                </span>
+                            </span>
+                        </span>
+                        <span>
+                            <span class="block w-full h-full rounded-md">
+                                <img loading="lazy" src="/images/app-hero.webp" alt="hero image" class="absolute top-0 left-0 dynamic-image duration-1000 ease-in-out scale-105 blur-md grayscale" />
+                            </span>
+                        </span>
+                    </div>
+                </section>
+                <section class="my-10 flex flex-col gap-32 ">
+                    <div class="flex flex-col items-center gap-5 md:gap-28 md:flex-row">
+                        <div class="relative w-full flex-1"><span area-hidden="true" class="absolute flex items-center gap-2 rounded-full bg-white py-3 px-3 text-base text-monstera sm:text-lg top-5 left-5"><svg width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M16.88 3.44a1.356 1.356 0 0 0-1.773 0C8.6 9.173 5.333 14.16 5.333 18.4c0 6.64 5.067 10.933 10.667 10.933S26.667 25.04 26.667 18.4c0-4.24-3.267-9.227-9.787-14.96Zm-6.44 15.226c.493 0 .893.347.987.827.546 2.96 3.04 3.974 4.853 3.827a1.003 1.003 0 0 1 1.053 1c0 .533-.426.973-.96 1-2.84.173-6.16-1.454-6.92-5.494-.106-.6.374-1.16.987-1.16Z" fill="#224722"></path>
+                                </svg>Water twice a week
+                                <!-- --></span>
+                            <div class="featured_image rounded-full-bottom-right">
+                                <div area-hidden="true" class="h-[270px] w-full md:h-full" style="background-image:url(/images/feature_0.webp)"></div>
+                            </div>
+                        </div>
+                        <div class="flex flex-1 flex-col"><span class="text-lg text-monstera">Unique care schedules</span>
+                            <h3 class="pb-6 pt-3 text-[32px] font-medium leading-[40px] text-monstera sm:text-4xl md:text-6xl md:leading-[52px]">Smart care reminders</h3>
+                            <p class="text-[18px] text-monstera md:text-xl">Are you not sure when it’s time to water your plants? Planta knows when! Just add them to the app and get notified when it’s time to water, fertilize, mist, clean (yes, it’s a thing) and repot!</p><a class="mainLink mt-10" href="https://getplanta.page.link/ios" target="_blank" rel="noreferrer">Download now</a>
+                        </div>
+                    </div>
+                    <div class="flex flex-col items-center gap-5 md:gap-28 md:flex-row-reverse">
+                        <div class="relative w-full flex-1"><span area-hidden="true" class="absolute flex items-center gap-2 rounded-full bg-white py-3 px-3 text-base text-monstera sm:text-lg top-5 left-0"><svg width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4 6.667V12h2.667V6.667H12V4H6.667A2.675 2.675 0 0 0 4 6.667ZM6.667 20H4v5.333C4 26.8 5.2 28 6.667 28H12v-2.667H6.667V20Zm18.666 5.333H20V28h5.333C26.8 28 28 26.8 28 25.333V20h-2.667v5.333Zm0-21.333H20v2.667h5.333V12H28V6.667C28 5.2 26.8 4 25.333 4Z" fill="#224722"></path>
+                                </svg>Scan your plant
+                                <!-- --></span>
+                            <div class="featured_image rounded-full">
+                                <div area-hidden="true" class="h-[270px] w-full md:h-full" style="background-image:url(/images/feature_1.webp)"></div>
+                            </div>
+                        </div>
+                        <div class="flex flex-1 flex-col"><span class="text-lg text-monstera">Scan your plant</span>
+                            <h3 class="pb-6 pt-3 text-[32px] font-medium leading-[40px] text-monstera sm:text-4xl md:text-6xl md:leading-[52px]">Plant identification</h3>
+                            <p class="text-[18px] text-monstera md:text-xl">Maybe you are not sure which plant you have? You can just take a picture of it and we will instantly let you know. With Plantas plant scanner you can scan all your house plants to find out the plants name and how to care for them.</p><a class="mainLink mt-10" href="https://getplanta.page.link/ios" target="_blank" rel="noreferrer">Download now</a>
+                        </div>
+                    </div>
+                    <div class="flex flex-col items-center gap-5 md:gap-28 md:flex-row">
+                        <div class="relative w-full flex-1"><span area-hidden="true" class="absolute flex items-center gap-2 rounded-full bg-white py-3 px-3 text-base text-monstera sm:text-lg bottom-5 left-5"><svg width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M16 9.333a6.669 6.669 0 0 0-6.667 6.666A6.67 6.67 0 0 0 16 22.666 6.67 6.67 0 0 0 22.667 16 6.67 6.67 0 0 0 16 9.333Zm-13.333 8h2.666c.734 0 1.334-.6 1.334-1.333 0-.734-.6-1.334-1.334-1.334H2.667c-.734 0-1.334.6-1.334 1.333 0 .734.6 1.334 1.334 1.334Zm24 0h2.666c.734 0 1.334-.6 1.334-1.333 0-.734-.6-1.334-1.334-1.334h-2.666c-.734 0-1.334.6-1.334 1.333 0 .734.6 1.334 1.334 1.334Zm-12-14.667v2.667c0 .733.6 1.333 1.333 1.333s1.333-.6 1.333-1.333V2.666c0-.733-.6-1.333-1.333-1.333s-1.333.6-1.333 1.333Zm0 24v2.667c0 .733.6 1.333 1.333 1.333s1.333-.6 1.333-1.333v-2.667c0-.733-.6-1.333-1.333-1.333s-1.333.6-1.333 1.333Zm-6.68-20.56a1.328 1.328 0 0 0-1.88 0c-.52.52-.52 1.374 0 1.88L7.52 9.4c.52.52 1.373.52 1.88 0 .507-.52.52-1.374 0-1.88L7.987 6.106ZM24.48 22.6a1.328 1.328 0 0 0-1.88 0c-.52.52-.52 1.374 0 1.88l1.413 1.414c.52.52 1.374.52 1.88 0 .52-.52.52-1.373 0-1.88l-1.413-1.414Zm1.413-14.613c.52-.52.52-1.373 0-1.88a1.328 1.328 0 0 0-1.88 0L22.6 7.52c-.52.52-.52 1.373 0 1.88.52.506 1.373.52 1.88 0l1.413-1.414ZM9.4 24.48c.52-.52.52-1.374 0-1.88a1.328 1.328 0 0 0-1.88 0l-1.413 1.413c-.52.52-.52 1.373 0 1.88.52.506 1.373.52 1.88 0L9.4 24.48Z" fill="#224722"></path>
+                                </svg>Place in part sun
+                                <!-- --></span>
+                            <div class="featured_image rounded-full-right">
+                                <div area-hidden="true" class="h-[270px] w-full md:h-full" style="background-image:url(/images/feature_2.webp)"></div>
+                            </div>
+                        </div>
+                        <div class="flex flex-1 flex-col"><span class="text-lg text-monstera">Find the right light</span>
+                            <h3 class="pb-6 pt-3 text-[32px] font-medium leading-[40px] text-monstera sm:text-4xl md:text-6xl md:leading-[52px]">Light meter</h3>
+                            <p class="text-[18px] text-monstera md:text-xl">Would you like to put a plant in a bathroom without windows? Some plants prefer shade and some are sun-lovers. Get to know which plants are suitable in your home based on the different light conditions of your rooms.</p><a class="mainLink mt-10" href="https://getplanta.page.link/ios" target="_blank" rel="noreferrer">Download now</a>
+                        </div>
+                    </div>
+                    <div class="flex flex-col items-center gap-5 md:gap-28 md:flex-row-reverse">
+                        <div class="relative w-full flex-1"><span area-hidden="true" class="absolute flex items-center gap-2 rounded-full bg-white py-3 px-3 text-base text-monstera sm:text-lg top-4 left-4 sm:top-14 sm:-left-14"><svg width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M26.667 8h-5.334V5.333c0-1.466-1.2-2.666-2.666-2.666h-5.334a2.675 2.675 0 0 0-2.666 2.666V8H5.333a2.675 2.675 0 0 0-2.666 2.667v16c0 1.466 1.2 2.666 2.666 2.666h21.334c1.466 0 2.666-1.2 2.666-2.666v-16C29.333 9.2 28.133 8 26.667 8ZM13.333 5.333h5.334V8h-5.334V5.333ZM20 20h-2.667v2.667c0 .733-.6 1.333-1.333 1.333s-1.333-.6-1.333-1.333V20H12c-.733 0-1.333-.6-1.333-1.333 0-.734.6-1.334 1.333-1.334h2.667v-2.666c0-.734.6-1.334 1.333-1.334s1.333.6 1.333 1.334v2.666H20c.733 0 1.333.6 1.333 1.334 0 .733-.6 1.333-1.333 1.333Z" fill="#224722"></path>
+                                </svg>Change plant location
+                                <!-- --></span>
+                            <div class="featured_image rounded-[40px] md:rounded-box">
+                                <div area-hidden="true" class="h-[270px] w-full md:h-full" style="background-image:url(/images/feature_3.webp)"></div>
+                            </div>
+                        </div>
+                        <div class="flex flex-1 flex-col"><span class="text-lg text-monstera">Plant doctor</span>
+                            <h3 class="pb-6 pt-3 text-[32px] font-medium leading-[40px] text-monstera sm:text-4xl md:text-6xl md:leading-[52px]">Dr. Planta</h3>
+                            <p class="text-[18px] text-monstera md:text-xl">Are your plants not feeling good? Dr. Planta can help you figure out what’s wrong and set up a treatment plan.</p><a class="mainLink mt-10" href="https://getplanta.page.link/ios" target="_blank" rel="noreferrer">Download now</a>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <section class="overflow-x-hidden pt-24 pb-32">
+                <div class="mx-auto max-w-[1140px] px-4">
+                    <h4 class="mb-16 text-center text-[32px] font-medium leading-[40px] text-monstera sm:text-4xl md:text-6xl md:leading-[52px]">What people are saying</h4>
+                    <section class="flex flex-col justify-center gap-4 pb-20 sm:flex-row"><span class="flex items-center justify-center gap-1 rounded-full bg-[#D9E7CB] px-6 py-2 text-[20px] text-monstera"><svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12.252 5.077c.943 0 2.125-.671 2.83-1.567.637-.81 1.102-1.944 1.102-3.076 0-.154-.014-.308-.04-.434-1.05.042-2.311.741-3.068 1.678-.598.714-1.142 1.832-1.142 2.98 0 .167.026.335.04.39.066.015.172.029.278.029ZM8.932 22c1.288 0 1.86-.91 3.466-.91 1.634 0 1.993.882 3.427.882 1.408 0 2.35-1.37 3.24-2.713.997-1.539 1.408-3.05 1.435-3.12-.093-.027-2.79-1.188-2.79-4.447 0-2.825 2.126-4.098 2.245-4.196-1.407-2.125-3.546-2.181-4.13-2.181-1.58 0-2.869 1.007-3.679 1.007-.877 0-2.032-.951-3.4-.951-2.603 0-5.246 2.265-5.246 6.545 0 2.657.983 5.469 2.191 7.287C6.727 20.74 7.631 22 8.932 22Z" fill="#224722"></path>
+                            </svg> App store
+                            <!-- --><strong>4.8</strong></span><span class="flex items-center justify-center gap-1 rounded-full bg-[#D9E7CB] px-6 py-2 text-[20px] text-monstera"><svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M23 12.257C23 18.534 18.632 23 12.18 23 5.995 23 1 18.085 1 12S5.995 1 12.18 1c3.012 0 5.545 1.087 7.497 2.879l-3.043 2.878C12.654 2.978 5.251 5.817 5.251 12c0 3.837 3.115 6.946 6.93 6.946 4.426 0 6.085-3.123 6.347-4.742H12.18v-3.783h10.644c.104.563.176 1.104.176 1.836Z" fill="#224722"></path>
+                            </svg> Google play
+                            <!-- --><strong>4.3</strong></span></section>
+                    <div class="h-auto">
+                        <div class="sc-jSMfEi lcwibA rec rec-carousel-wrapper ">
+                            <div class="sc-eCYdqJ jytZFe rec rec-carousel" style="height:0">
+                                <div class="sc-dkzDqf gNublD rec rec-slider-container">
+                                    <div class="sc-hKMtZM vNHFq rec rec-slider" style="transition:all 500ms ease;left:0px;right:auto;top:auto">
+                                        <div class="rec rec-swipable" style="display:flex;flex-direction:row">
+                                            <div class="rec rec-carousel-item rec-carousel-item-0 rec-carousel-item-hidden">
+                                                <div id="0" style="width:0px;padding:0px 15px" class="sc-gsnTZi jiaani rec rec-item-wrapper">
+                                                    <div class="flex w-full flex-col rounded-[20px] bg-white p-6" tabindex="-1">
+                                                        <h4 class="mb-3 text-[20px] font-medium text-monstera sm:text-[26px]">An amazing app, I love this so much!</h4>
+                                                        <p class="pb-6 text-[14px] text-monstera sm:text-[18px]">“I have over 40 plants in my home and i want to keep them at their best, this app has helped me do so. I never leave reviews but Planta deserve this for creating my favourite app!”</p><span class="mt-auto flex items-center gap-2 text-monstera">Amy
+                                                            <!-- -->
+                                                            <ul area-hidden="true" class="flex">
+                                                                <li><svg width="21" height="19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                        <path d="m10.5 0 2.357 7.255h7.63l-6.173 4.484 2.358 7.256L10.5 14.51l-6.172 4.484 2.358-7.256L.514 7.255h7.629L10.5 0Z" fill="#224722"></path>
+                                                                    </svg></li>
+                                                                <li><svg width="21" height="19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                        <path d="m10.5 0 2.357 7.255h7.63l-6.173 4.484 2.358 7.256L10.5 14.51l-6.172 4.484 2.358-7.256L.514 7.255h7.629L10.5 0Z" fill="#224722"></path>
+                                                                    </svg></li>
+                                                                <li><svg width="21" height="19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                        <path d="m10.5 0 2.357 7.255h7.63l-6.173 4.484 2.358 7.256L10.5 14.51l-6.172 4.484 2.358-7.256L.514 7.255h7.629L10.5 0Z" fill="#224722"></path>
+                                                                    </svg></li>
+                                                                <li><svg width="21" height="19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                        <path d="m10.5 0 2.357 7.255h7.63l-6.173 4.484 2.358 7.256L10.5 14.51l-6.172 4.484 2.358-7.256L.514 7.255h7.629L10.5 0Z" fill="#224722"></path>
+                                                                    </svg></li>
+                                                                <li><svg width="21" height="19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                        <path d="m10.5 0 2.357 7.255h7.63l-6.173 4.484 2.358 7.256L10.5 14.51l-6.172 4.484 2.358-7.256L.514 7.255h7.629L10.5 0Z" fill="#224722"></path>
+                                                                    </svg></li>
+                                                            </ul>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="rec rec-carousel-item rec-carousel-item-1 rec-carousel-item-hidden">
+                                                <div id="1" style="width:0px;padding:0px 15px" class="sc-gsnTZi jiaani rec rec-item-wrapper">
+                                                    <div class="flex w-full flex-col rounded-[20px] bg-white p-6" tabindex="-1">
+                                                        <h4 class="mb-3 text-[20px] font-medium text-monstera sm:text-[26px]">I love this app</h4>
+                                                        <p class="pb-6 text-[14px] text-monstera sm:text-[18px]">“I love this app &amp; highly recommend it to anyone looking to increase their understanding of plant care. I went from having very limited plant knowledge &amp; struggling to keep my plants alive, to now having 30+ indoor plants that are all thriving thanks to Planta. I will definitely be renewing my subscription, as it&#x27;s worth every penny.”</p><span class="mt-auto flex items-center gap-2 text-monstera">Sara
+                                                            <!-- -->
+                                                            <ul area-hidden="true" class="flex">
+                                                                <li><svg width="21" height="19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                        <path d="m10.5 0 2.357 7.255h7.63l-6.173 4.484 2.358 7.256L10.5 14.51l-6.172 4.484 2.358-7.256L.514 7.255h7.629L10.5 0Z" fill="#224722"></path>
+                                                                    </svg></li>
+                                                                <li><svg width="21" height="19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                        <path d="m10.5 0 2.357 7.255h7.63l-6.173 4.484 2.358 7.256L10.5 14.51l-6.172 4.484 2.358-7.256L.514 7.255h7.629L10.5 0Z" fill="#224722"></path>
+                                                                    </svg></li>
+                                                                <li><svg width="21" height="19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                        <path d="m10.5 0 2.357 7.255h7.63l-6.173 4.484 2.358 7.256L10.5 14.51l-6.172 4.484 2.358-7.256L.514 7.255h7.629L10.5 0Z" fill="#224722"></path>
+                                                                    </svg></li>
+                                                                <li><svg width="21" height="19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                        <path d="m10.5 0 2.357 7.255h7.63l-6.173 4.484 2.358 7.256L10.5 14.51l-6.172 4.484 2.358-7.256L.514 7.255h7.629L10.5 0Z" fill="#224722"></path>
+                                                                    </svg></li>
+                                                                <li><svg width="21" height="19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                        <path d="m10.5 0 2.357 7.255h7.63l-6.173 4.484 2.358 7.256L10.5 14.51l-6.172 4.484 2.358-7.256L.514 7.255h7.629L10.5 0Z" fill="#224722"></path>
+                                                                    </svg></li>
+                                                            </ul>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="rec rec-carousel-item rec-carousel-item-2 rec-carousel-item-hidden rec-carousel-item-prev">
+                                                <div id="2" style="width:0px;padding:0px 15px" class="sc-gsnTZi jiaani rec rec-item-wrapper">
+                                                    <div class="flex w-full flex-col rounded-[20px] bg-white p-6" tabindex="-1">
+                                                        <h4 class="mb-3 text-[20px] font-medium text-monstera sm:text-[26px]">Super helpful for keeping my plants healthy!</h4>
+                                                        <p class="pb-6 text-[14px] text-monstera sm:text-[18px]">“I bought premium sub to try it out for 3 months and I&#x27;m quite happy with it.”</p><span class="mt-auto flex items-center gap-2 text-monstera">Christie
+                                                            <!-- -->
+                                                            <ul area-hidden="true" class="flex">
+                                                                <li><svg width="21" height="19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                        <path d="m10.5 0 2.357 7.255h7.63l-6.173 4.484 2.358 7.256L10.5 14.51l-6.172 4.484 2.358-7.256L.514 7.255h7.629L10.5 0Z" fill="#224722"></path>
+                                                                    </svg></li>
+                                                                <li><svg width="21" height="19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                        <path d="m10.5 0 2.357 7.255h7.63l-6.173 4.484 2.358 7.256L10.5 14.51l-6.172 4.484 2.358-7.256L.514 7.255h7.629L10.5 0Z" fill="#224722"></path>
+                                                                    </svg></li>
+                                                                <li><svg width="21" height="19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                        <path d="m10.5 0 2.357 7.255h7.63l-6.173 4.484 2.358 7.256L10.5 14.51l-6.172 4.484 2.358-7.256L.514 7.255h7.629L10.5 0Z" fill="#224722"></path>
+                                                                    </svg></li>
+                                                                <li><svg width="21" height="19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                        <path d="m10.5 0 2.357 7.255h7.63l-6.173 4.484 2.358 7.256L10.5 14.51l-6.172 4.484 2.358-7.256L.514 7.255h7.629L10.5 0Z" fill="#224722"></path>
+                                                                    </svg></li>
+                                                                <li><svg width="21" height="19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                        <path d="m10.5 0 2.357 7.255h7.63l-6.173 4.484 2.358 7.256L10.5 14.51l-6.172 4.484 2.358-7.256L.514 7.255h7.629L10.5 0Z" fill="#224722"></path>
+                                                                    </svg></li>
+                                                            </ul>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="rec rec-carousel-item rec-carousel-item-3 rec-carousel-item-visible">
+                                                <div id="3" style="width:0px;padding:0px 15px" class="sc-gsnTZi jiaani rec rec-item-wrapper">
+                                                    <div class="flex w-full flex-col rounded-[20px] bg-white p-6" tabindex="0">
+                                                        <h4 class="mb-3 text-[20px] font-medium text-monstera sm:text-[26px]">Totally amazing</h4>
+                                                        <p class="pb-6 text-[14px] text-monstera sm:text-[18px]">“Totally amazing. I have not used this app for long but my plants are looking much better and I am not stressing about when to water and feed them”</p><span class="mt-auto flex items-center gap-2 text-monstera">Gella8
+                                                            <!-- -->
+                                                            <ul area-hidden="true" class="flex">
+                                                                <li><svg width="21" height="19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                        <path d="m10.5 0 2.357 7.255h7.63l-6.173 4.484 2.358 7.256L10.5 14.51l-6.172 4.484 2.358-7.256L.514 7.255h7.629L10.5 0Z" fill="#224722"></path>
+                                                                    </svg></li>
+                                                                <li><svg width="21" height="19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                        <path d="m10.5 0 2.357 7.255h7.63l-6.173 4.484 2.358 7.256L10.5 14.51l-6.172 4.484 2.358-7.256L.514 7.255h7.629L10.5 0Z" fill="#224722"></path>
+                                                                    </svg></li>
+                                                                <li><svg width="21" height="19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                        <path d="m10.5 0 2.357 7.255h7.63l-6.173 4.484 2.358 7.256L10.5 14.51l-6.172 4.484 2.358-7.256L.514 7.255h7.629L10.5 0Z" fill="#224722"></path>
+                                                                    </svg></li>
+                                                                <li><svg width="21" height="19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                        <path d="m10.5 0 2.357 7.255h7.63l-6.173 4.484 2.358 7.256L10.5 14.51l-6.172 4.484 2.358-7.256L.514 7.255h7.629L10.5 0Z" fill="#224722"></path>
+                                                                    </svg></li>
+                                                                <li><svg width="21" height="19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                        <path d="m10.5 0 2.357 7.255h7.63l-6.173 4.484 2.358 7.256L10.5 14.51l-6.172 4.484 2.358-7.256L.514 7.255h7.629L10.5 0Z" fill="#224722"></path>
+                                                                    </svg></li>
+                                                            </ul>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="rec rec-carousel-item rec-carousel-item-4 rec-carousel-item-hidden rec-carousel-item-next">
+                                                <div id="4" style="width:0px;padding:0px 15px" class="sc-gsnTZi jiaani rec rec-item-wrapper">
+                                                    <div class="flex w-full flex-col rounded-[20px] bg-white p-6" tabindex="-1">
+                                                        <h4 class="mb-3 text-[20px] font-medium text-monstera sm:text-[26px]">Love it</h4>
+                                                        <p class="pb-6 text-[14px] text-monstera sm:text-[18px]">“I downloaded this app a few months ago and absolutely LOVE it. My plants have been thriving ever since.”</p><span class="mt-auto flex items-center gap-2 text-monstera">Miia Bench
+                                                            <!-- -->
+                                                            <ul area-hidden="true" class="flex">
+                                                                <li><svg width="21" height="19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                        <path d="m10.5 0 2.357 7.255h7.63l-6.173 4.484 2.358 7.256L10.5 14.51l-6.172 4.484 2.358-7.256L.514 7.255h7.629L10.5 0Z" fill="#224722"></path>
+                                                                    </svg></li>
+                                                                <li><svg width="21" height="19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                        <path d="m10.5 0 2.357 7.255h7.63l-6.173 4.484 2.358 7.256L10.5 14.51l-6.172 4.484 2.358-7.256L.514 7.255h7.629L10.5 0Z" fill="#224722"></path>
+                                                                    </svg></li>
+                                                                <li><svg width="21" height="19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                        <path d="m10.5 0 2.357 7.255h7.63l-6.173 4.484 2.358 7.256L10.5 14.51l-6.172 4.484 2.358-7.256L.514 7.255h7.629L10.5 0Z" fill="#224722"></path>
+                                                                    </svg></li>
+                                                                <li><svg width="21" height="19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                        <path d="m10.5 0 2.357 7.255h7.63l-6.173 4.484 2.358 7.256L10.5 14.51l-6.172 4.484 2.358-7.256L.514 7.255h7.629L10.5 0Z" fill="#224722"></path>
+                                                                    </svg></li>
+                                                                <li><svg width="21" height="19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                        <path d="m10.5 0 2.357 7.255h7.63l-6.173 4.484 2.358 7.256L10.5 14.51l-6.172 4.484 2.358-7.256L.514 7.255h7.629L10.5 0Z" fill="#224722"></path>
+                                                                    </svg></li>
+                                                            </ul>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="rec rec-carousel-item rec-carousel-item-5 rec-carousel-item-hidden">
+                                                <div id="5" style="width:0px;padding:0px 15px" class="sc-gsnTZi jiaani rec rec-item-wrapper">
+                                                    <div class="flex w-full flex-col rounded-[20px] bg-white p-6" tabindex="-1">
+                                                        <h4 class="mb-3 text-[20px] font-medium text-monstera sm:text-[26px]">I love this!</h4>
+                                                        <p class="pb-6 text-[14px] text-monstera sm:text-[18px]">“I enjoy keeping plants but I&#x27;m not very green-fingered and never had much luck getting them to thrive. Now I&#x27;ve identified and catalogued all my plants in the app (bit shocked to find I have 50!) and already I&#x27;ve been able to identify which plants were poorly sited and move them to hopefully happier spots. This app tells me exactly when and how to water, mist or feed each plant, and the advice is specific to each plant, not just generic. I&#x27;m really impressed!”</p><span class="mt-auto flex items-center gap-2 text-monstera">Vicki
+                                                            <!-- -->
+                                                            <ul area-hidden="true" class="flex">
+                                                                <li><svg width="21" height="19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                        <path d="m10.5 0 2.357 7.255h7.63l-6.173 4.484 2.358 7.256L10.5 14.51l-6.172 4.484 2.358-7.256L.514 7.255h7.629L10.5 0Z" fill="#224722"></path>
+                                                                    </svg></li>
+                                                                <li><svg width="21" height="19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                        <path d="m10.5 0 2.357 7.255h7.63l-6.173 4.484 2.358 7.256L10.5 14.51l-6.172 4.484 2.358-7.256L.514 7.255h7.629L10.5 0Z" fill="#224722"></path>
+                                                                    </svg></li>
+                                                                <li><svg width="21" height="19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                        <path d="m10.5 0 2.357 7.255h7.63l-6.173 4.484 2.358 7.256L10.5 14.51l-6.172 4.484 2.358-7.256L.514 7.255h7.629L10.5 0Z" fill="#224722"></path>
+                                                                    </svg></li>
+                                                                <li><svg width="21" height="19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                        <path d="m10.5 0 2.357 7.255h7.63l-6.173 4.484 2.358 7.256L10.5 14.51l-6.172 4.484 2.358-7.256L.514 7.255h7.629L10.5 0Z" fill="#224722"></path>
+                                                                    </svg></li>
+                                                                <li><svg width="21" height="19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                        <path d="m10.5 0 2.357 7.255h7.63l-6.173 4.484 2.358 7.256L10.5 14.51l-6.172 4.484 2.358-7.256L.514 7.255h7.629L10.5 0Z" fill="#224722"></path>
+                                                                    </svg></li>
+                                                            </ul>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="rec rec-carousel-item rec-carousel-item-6 rec-carousel-item-hidden">
+                                                <div id="6" style="width:0px;padding:0px 15px" class="sc-gsnTZi jiaani rec rec-item-wrapper">
+                                                    <div class="flex w-full flex-col rounded-[20px] bg-white p-6" tabindex="-1">
+                                                        <h4 class="mb-3 text-[20px] font-medium text-monstera sm:text-[26px]">This is the ULTIMATE plant care app</h4>
+                                                        <p class="pb-6 text-[14px] text-monstera sm:text-[18px]">“It&#x27;s the ideal plant tracker, especially for new plant parents. It helps me by providing a basic plant care schedule for each plant I have and as I am learning to identify the individual needs of each of my plants, it allows me to delay or modify tasks as needed. Truly the best app you could hope for. It took less than a week for me to get the premium version and it has been about a month now and I haven&#x27;t regretted it at all!”</p><span class="mt-auto flex items-center gap-2 text-monstera">Yessi
+                                                            <!-- -->
+                                                            <ul area-hidden="true" class="flex">
+                                                                <li><svg width="21" height="19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                        <path d="m10.5 0 2.357 7.255h7.63l-6.173 4.484 2.358 7.256L10.5 14.51l-6.172 4.484 2.358-7.256L.514 7.255h7.629L10.5 0Z" fill="#224722"></path>
+                                                                    </svg></li>
+                                                                <li><svg width="21" height="19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                        <path d="m10.5 0 2.357 7.255h7.63l-6.173 4.484 2.358 7.256L10.5 14.51l-6.172 4.484 2.358-7.256L.514 7.255h7.629L10.5 0Z" fill="#224722"></path>
+                                                                    </svg></li>
+                                                                <li><svg width="21" height="19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                        <path d="m10.5 0 2.357 7.255h7.63l-6.173 4.484 2.358 7.256L10.5 14.51l-6.172 4.484 2.358-7.256L.514 7.255h7.629L10.5 0Z" fill="#224722"></path>
+                                                                    </svg></li>
+                                                                <li><svg width="21" height="19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                        <path d="m10.5 0 2.357 7.255h7.63l-6.173 4.484 2.358 7.256L10.5 14.51l-6.172 4.484 2.358-7.256L.514 7.255h7.629L10.5 0Z" fill="#224722"></path>
+                                                                    </svg></li>
+                                                                <li><svg width="21" height="19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                        <path d="m10.5 0 2.357 7.255h7.63l-6.173 4.484 2.358 7.256L10.5 14.51l-6.172 4.484 2.358-7.256L.514 7.255h7.629L10.5 0Z" fill="#224722"></path>
+                                                                    </svg></li>
+                                                            </ul>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="rec rec-carousel-item rec-carousel-item-7 rec-carousel-item-hidden">
+                                                <div id="7" style="width:0px;padding:0px 15px" class="sc-gsnTZi jiaani rec rec-item-wrapper">
+                                                    <div class="flex w-full flex-col rounded-[20px] bg-white p-6" tabindex="-1">
+                                                        <h4 class="mb-3 text-[20px] font-medium text-monstera sm:text-[26px]">Great app!</h4>
+                                                        <p class="pb-6 text-[14px] text-monstera sm:text-[18px]">“I’m so nervous on my new plants because I’m a beginner and I bought some fairly big commitments. This app helped me so much, especially with my forgetfulness. Thank you!”</p><span class="mt-auto flex items-center gap-2 text-monstera">Haps
+                                                            <!-- -->
+                                                            <ul area-hidden="true" class="flex">
+                                                                <li><svg width="21" height="19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                        <path d="m10.5 0 2.357 7.255h7.63l-6.173 4.484 2.358 7.256L10.5 14.51l-6.172 4.484 2.358-7.256L.514 7.255h7.629L10.5 0Z" fill="#224722"></path>
+                                                                    </svg></li>
+                                                                <li><svg width="21" height="19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                        <path d="m10.5 0 2.357 7.255h7.63l-6.173 4.484 2.358 7.256L10.5 14.51l-6.172 4.484 2.358-7.256L.514 7.255h7.629L10.5 0Z" fill="#224722"></path>
+                                                                    </svg></li>
+                                                                <li><svg width="21" height="19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                        <path d="m10.5 0 2.357 7.255h7.63l-6.173 4.484 2.358 7.256L10.5 14.51l-6.172 4.484 2.358-7.256L.514 7.255h7.629L10.5 0Z" fill="#224722"></path>
+                                                                    </svg></li>
+                                                                <li><svg width="21" height="19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                        <path d="m10.5 0 2.357 7.255h7.63l-6.173 4.484 2.358 7.256L10.5 14.51l-6.172 4.484 2.358-7.256L.514 7.255h7.629L10.5 0Z" fill="#224722"></path>
+                                                                    </svg></li>
+                                                                <li><svg width="21" height="19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                        <path d="m10.5 0 2.357 7.255h7.63l-6.173 4.484 2.358 7.256L10.5 14.51l-6.172 4.484 2.358-7.256L.514 7.255h7.629L10.5 0Z" fill="#224722"></path>
+                                                                    </svg></li>
+                                                            </ul>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="rec rec-carousel-item rec-carousel-item-8 rec-carousel-item-hidden">
+                                                <div id="8" style="width:0px;padding:0px 15px" class="sc-gsnTZi jiaani rec rec-item-wrapper">
+                                                    <div class="flex w-full flex-col rounded-[20px] bg-white p-6" tabindex="-1">
+                                                        <h4 class="mb-3 text-[20px] font-medium text-monstera sm:text-[26px]">Absolutely wonderful app</h4>
+                                                        <p class="pb-6 text-[14px] text-monstera sm:text-[18px]">“I use it everyday and plan out future plant purchases for it! I&#x27;ve got everyone hooked onto it as well!”</p><span class="mt-auto flex items-center gap-2 text-monstera">Samantha
+                                                            <!-- -->
+                                                            <ul area-hidden="true" class="flex">
+                                                                <li><svg width="21" height="19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                        <path d="m10.5 0 2.357 7.255h7.63l-6.173 4.484 2.358 7.256L10.5 14.51l-6.172 4.484 2.358-7.256L.514 7.255h7.629L10.5 0Z" fill="#224722"></path>
+                                                                    </svg></li>
+                                                                <li><svg width="21" height="19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                        <path d="m10.5 0 2.357 7.255h7.63l-6.173 4.484 2.358 7.256L10.5 14.51l-6.172 4.484 2.358-7.256L.514 7.255h7.629L10.5 0Z" fill="#224722"></path>
+                                                                    </svg></li>
+                                                                <li><svg width="21" height="19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                        <path d="m10.5 0 2.357 7.255h7.63l-6.173 4.484 2.358 7.256L10.5 14.51l-6.172 4.484 2.358-7.256L.514 7.255h7.629L10.5 0Z" fill="#224722"></path>
+                                                                    </svg></li>
+                                                                <li><svg width="21" height="19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                        <path d="m10.5 0 2.357 7.255h7.63l-6.173 4.484 2.358 7.256L10.5 14.51l-6.172 4.484 2.358-7.256L.514 7.255h7.629L10.5 0Z" fill="#224722"></path>
+                                                                    </svg></li>
+                                                                <li><svg width="21" height="19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                        <path d="m10.5 0 2.357 7.255h7.63l-6.173 4.484 2.358 7.256L10.5 14.51l-6.172 4.484 2.358-7.256L.514 7.255h7.629L10.5 0Z" fill="#224722"></path>
+                                                                    </svg></li>
+                                                            </ul>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="rec rec-pagination mt-6"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="mx-auto max-w-[1140px] px-4">
+                <section class="py-14">
+                    <h4 class="mb-16 text-center text-[32px] font-medium leading-[40px] text-monstera sm:text-4xl md:text-6xl md:leading-[52px]">Whatever plant <br> we got you covered!</h4>
+                    <div class="plantGrid">
+                        <div id="plant-grid-cacti-and-succulents" class="overflow-hidden relative safari-translate-new-stack-ctx"><a class="plantGrid-link flex h-full w-full p-4" href="/plants/cacti-and-succulents"><span class="z-10 text-[24px] sm:text-[26px] lg:text-[30px] leading-10 text-white">Cacti &amp; Succulents</span><span class="grid-cross planta-grid-icon h-[39px] w-[39px]"><svg viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill="#fff" d="M18.055 0h3v39h-3z"></path>
+                                        <path fill="#fff" d="M39 18.056v3H0v-3z"></path>
+                                    </svg></span><span class="block w-full h-full rounded-md"><img loading="lazy" src="/images/plant-categories/cactus_succulents.webp" alt="Cacti &amp; Succulents" class="absolute top-0 left-0 -z-10 h-full w-full object-cover brightness-75 grayscale-[50%] transition-all duration-300 dynamic-image duration-1000 ease-in-out scale-105 blur-md grayscale" /></span></a></div>
+                        <div id="plant-grid-vegetables" class="overflow-hidden relative safari-translate-new-stack-ctx"><a class="plantGrid-link flex h-full w-full p-4" href="/plants/vegetables"><span class="z-10 text-[24px] sm:text-[26px] lg:text-[30px] leading-10 text-white">Vegetables</span><span class="grid-cross planta-grid-icon h-[39px] w-[39px]"><svg viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill="#fff" d="M18.055 0h3v39h-3z"></path>
+                                        <path fill="#fff" d="M39 18.056v3H0v-3z"></path>
+                                    </svg></span><span class="block w-full h-full rounded-md"><img loading="lazy" src="/images/plant-categories/vegetables.webp" alt="Vegetables" class="absolute top-0 left-0 -z-10 h-full w-full object-cover brightness-75 grayscale-[50%] transition-all duration-300 dynamic-image duration-1000 ease-in-out scale-105 blur-md grayscale" /></span></a></div>
+                        <div id="plant-grid-herbs" class="overflow-hidden relative safari-translate-new-stack-ctx"><a class="plantGrid-link flex h-full w-full p-4" href="/plants/herbs"><span class="z-10 text-[24px] sm:text-[26px] lg:text-[30px] leading-10 text-white">Herbs</span><span class="grid-cross planta-grid-icon h-[39px] w-[39px]"><svg viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill="#fff" d="M18.055 0h3v39h-3z"></path>
+                                        <path fill="#fff" d="M39 18.056v3H0v-3z"></path>
+                                    </svg></span><span class="block w-full h-full rounded-md"><img loading="lazy" src="/images/plant-categories/herbs.webp" alt="Herbs" class="absolute top-0 left-0 -z-10 h-full w-full object-cover brightness-75 grayscale-[50%] transition-all duration-300 dynamic-image duration-1000 ease-in-out scale-105 blur-md grayscale" /></span></a></div>
+                        <div id="plant-grid-orchids" class="overflow-hidden relative safari-translate-new-stack-ctx"><a class="plantGrid-link flex h-full w-full p-4" href="/plants/orchids"><span class="z-10 text-[24px] sm:text-[26px] lg:text-[30px] leading-10 text-white">Orchids</span><span class="grid-cross planta-grid-icon h-[39px] w-[39px]"><svg viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill="#fff" d="M18.055 0h3v39h-3z"></path>
+                                        <path fill="#fff" d="M39 18.056v3H0v-3z"></path>
+                                    </svg></span><span class="block w-full h-full rounded-md"><img loading="lazy" src="/images/plant-categories/orchids.webp" alt="Orchids" class="absolute top-0 left-0 -z-10 h-full w-full object-cover brightness-75 grayscale-[50%] transition-all duration-300 dynamic-image duration-1000 ease-in-out scale-105 blur-md grayscale" /></span></a></div>
+                        <div id="plant-grid-foliage-plants" class="overflow-hidden relative safari-translate-new-stack-ctx"><a class="plantGrid-link flex h-full w-full p-4" href="/plants/foliage-plants"><span class="z-10 text-[24px] sm:text-[26px] lg:text-[30px] leading-10 text-white">Foliage Plants</span><span class="grid-cross planta-grid-icon h-[39px] w-[39px]"><svg viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill="#fff" d="M18.055 0h3v39h-3z"></path>
+                                        <path fill="#fff" d="M39 18.056v3H0v-3z"></path>
+                                    </svg></span><span class="block w-full h-full rounded-md"><img loading="lazy" src="/images/plant-categories/foliage_plants.webp" alt="Foliage Plants" class="absolute top-0 left-0 -z-10 h-full w-full object-cover brightness-75 grayscale-[50%] transition-all duration-300 dynamic-image duration-1000 ease-in-out scale-105 blur-md grayscale" /></span></a></div>
+                        <div id="plant-grid-flowering-plants" class="overflow-hidden relative safari-translate-new-stack-ctx"><a class="plantGrid-link flex h-full w-full p-4" href="/plants/flowering-plants"><span class="z-10 text-[24px] sm:text-[26px] lg:text-[30px] leading-10 text-white">Flowering Plants</span><span class="grid-cross planta-grid-icon h-[39px] w-[39px]"><svg viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill="#fff" d="M18.055 0h3v39h-3z"></path>
+                                        <path fill="#fff" d="M39 18.056v3H0v-3z"></path>
+                                    </svg></span><span class="block w-full h-full rounded-md"><img loading="lazy" src="/images/plant-categories/flowering_plants.webp" alt="Flowering Plants" class="absolute top-0 left-0 -z-10 h-full w-full object-cover brightness-75 grayscale-[50%] transition-all duration-300 dynamic-image duration-1000 ease-in-out scale-105 blur-md grayscale" /></span></a></div>
+                    </div>
+                </section>
+            </div>
+            <footer class="mt-28 bg-calathea">
+                <section class="mx-auto grid h-full min-h-[500px] max-w-[1140px] grid-cols-1 py-12 px-4 md:grid-cols-2 md:py-14">
+                    <div class="mb-16 flex flex-col justify-between md:mb-0"><a class="relative" href="/"><span style="box-sizing:border-box;display:inline-block;overflow:hidden;width:106px;height:28px;background:none;opacity:1;border:0;margin:0;padding:0;position:relative"><img alt="Planta" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" decoding="async" data-nimg="fixed" style="position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%" /><noscript><img alt="Planta" srcSet="/icons/planta-light.svg 1x, /icons/planta-light.svg 2x" src="/icons/planta-light.svg" decoding="async" data-nimg="fixed" style="position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%" loading="lazy" /></noscript></span></a>
+                        <ul class="hidden items-end gap-3 md:flex">
+                            <li class="leading-none"><a target="_blank" rel="noreferer" class="relative" href="https://getplanta.page.link/ios"><span style="box-sizing:border-box;display:inline-block;overflow:hidden;width:36px;height:36px;background:none;opacity:1;border:0;margin:0;padding:0;position:relative"><img alt="Planta app" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" decoding="async" data-nimg="fixed" style="position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%" /><noscript><img alt="Planta app" srcSet="/icons/planta-square.svg 1x, /icons/planta-square.svg 2x" src="/icons/planta-square.svg" decoding="async" data-nimg="fixed" style="position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%" loading="lazy" /></noscript></span></a></li>
+                            <li class="leading-none"><a target="_blank" rel="noreferer" class="relative" href="https://getplanta.page.link/ios"><span style="box-sizing:border-box;display:inline-block;overflow:hidden;width:126px;height:36px;background:none;opacity:1;border:0;margin:0;padding:0;position:relative"><img alt="Planta on the app store" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" decoding="async" data-nimg="fixed" style="position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%" /><noscript><img alt="Planta on the app store" srcSet="/icons/app-store.svg 1x, /icons/app-store.svg 2x" src="/icons/app-store.svg" decoding="async" data-nimg="fixed" style="position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%" loading="lazy" /></noscript></span></a></li>
+                            <li class="leading-none"><a target="_blank" rel="noreferer" class="relative" href="https://getplanta.page.link/android"><span style="box-sizing:border-box;display:inline-block;overflow:hidden;width:126px;height:36px;background:none;opacity:1;border:0;margin:0;padding:0;position:relative"><img alt="Planta on google play" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" decoding="async" data-nimg="fixed" style="position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%" /><noscript><img alt="Planta on google play" srcSet="/icons/google-play.svg 1x, /icons/google-play.svg 2x" src="/icons/google-play.svg" decoding="async" data-nimg="fixed" style="position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%" loading="lazy" /></noscript></span></a></li>
+                        </ul>
+                    </div>
+                    <div class="flex flex-col justify-between">
+                        <ul class="flex flex-col justify-between text-spearMint sm:flex-row">
+                            <li class="mb-5 sm:mb-0">
+                                <div class="block sm:hidden">
+                                    <div class="relative inline-block w-full"><button class="flex h-10 w-full items-center justify-between px-2 text-base text-spearMint" type="button" id="react-aria-1" aria-haspopup="true" aria-expanded="false">Navigation
+                                            <!-- --><span aria-hidden="true" class="pl-1"><svg width="12" height="8" fill="none" xmlns="http://www.w3.org/2000/svg" class="fill-spearMint transition-transform">
+                                                    <path d="M1.41.59 6 5.17 10.59.59 12 2 6 8 0 2 1.41.59Z"></path>
+                                                </svg></span></button></div>
+                                </div>
+                                <h5 class="hidden pb-3 text-lg sm:block">Navigation</h5>
+                                <ul class="hidden opacity-50 sm:block">
+                                    <li class="leading-8"><a target="_self" class="text-lg hover:underline" href="/about">About planta</a></li>
+                                    <li class="leading-8"><a target="_blank" class="text-lg hover:underline" href="https://getplanta.page.link/ios">Planta for iOS</a></li>
+                                    <li class="leading-8"><a target="_blank" class="text-lg hover:underline" href="https://getplanta.page.link/android">Planta for Android</a></li>
+                                    <li class="leading-8"><a target="_self" class="text-lg hover:underline" href="/terms-and-conditions">Terms and conditions</a></li>
+                                    <li class="leading-8"><a target="_self" class="text-lg hover:underline" href="/privacy-policy">Privacy policy</a></li>
+                                </ul>
+                            </li>
+                            <li class="mb-5 sm:mb-0">
+                                <div class="block sm:hidden">
+                                    <div class="relative inline-block w-full"><button class="flex h-10 w-full items-center justify-between px-2 text-base text-spearMint" type="button" id="react-aria-3" aria-haspopup="true" aria-expanded="false">Contact
+                                            <!-- --><span aria-hidden="true" class="pl-1"><svg width="12" height="8" fill="none" xmlns="http://www.w3.org/2000/svg" class="fill-spearMint transition-transform">
+                                                    <path d="M1.41.59 6 5.17 10.59.59 12 2 6 8 0 2 1.41.59Z"></path>
+                                                </svg></span></button></div>
+                                </div>
+                                <h5 class="hidden pb-3 text-lg sm:block">Contact</h5>
+                                <ul class="hidden opacity-50 sm:block">
+                                    <li class="leading-8"><a target="_blank" class="text-lg hover:underline" href="https://getplanta.kb.help/">Help center</a></li>
+                                    <li class="leading-8"><a target="_blank" class="text-lg hover:underline" href="https://direct.lc.chat/12188766/">Support</a></li>
+                                    <li class="leading-8"><a target="_self" class="text-lg hover:underline" href="mailto:contact@getplanta.com">Send E-mail</a></li>
+                                </ul>
+                            </li>
+                            <li class="mb-5 sm:mb-0">
+                                <div class="block sm:hidden">
+                                    <div class="relative inline-block w-full"><button class="flex h-10 w-full items-center justify-between px-2 text-base text-spearMint" type="button" id="react-aria-5" aria-haspopup="true" aria-expanded="false">Follow us
+                                            <!-- --><span aria-hidden="true" class="pl-1"><svg width="12" height="8" fill="none" xmlns="http://www.w3.org/2000/svg" class="fill-spearMint transition-transform">
+                                                    <path d="M1.41.59 6 5.17 10.59.59 12 2 6 8 0 2 1.41.59Z"></path>
+                                                </svg></span></button></div>
+                                </div>
+                                <h5 class="hidden pb-3 text-lg sm:block">Follow us</h5>
+                                <ul class="hidden opacity-50 sm:block">
+                                    <li class="leading-8"><a target="_blank" class="text-lg hover:underline" href="https://www.instagram.com/planta_app">Instagram</a></li>
+                                    <li class="leading-8"><a target="_blank" class="text-lg hover:underline" href="https://www.facebook.com/plantaapp">Facebook</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <p class="hidden h-[38px] items-center justify-end text-spearMint md:flex">©
+                            <!-- -->2023
+                            <!-- --> GetPlanta. All rights reserved
+                            <!-- -->
+                        </p>
+                    </div>
+                    <div class="mt-10 flex flex-col items-center justify-between gap-10 pt-10 sm:flex-row md:hidden">
+                        <ul class="flex items-end gap-3 self-baseline">
+                            <li class="leading-none"><a target="_blank" rel="noreferer" class="relative" href="https://getplanta.page.link/ios"><span style="box-sizing:border-box;display:inline-block;overflow:hidden;width:36px;height:36px;background:none;opacity:1;border:0;margin:0;padding:0;position:relative"><img alt="Planta app" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" decoding="async" data-nimg="fixed" style="position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%" /><noscript><img alt="Planta app" srcSet="/icons/planta-square.svg 1x, /icons/planta-square.svg 2x" src="/icons/planta-square.svg" decoding="async" data-nimg="fixed" style="position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%" loading="lazy" /></noscript></span></a></li>
+                            <li class="leading-none"><a target="_blank" rel="noreferer" class="relative" href="https://getplanta.page.link/ios"><span style="box-sizing:border-box;display:inline-block;overflow:hidden;width:126px;height:36px;background:none;opacity:1;border:0;margin:0;padding:0;position:relative"><img alt="Planta on the app store" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" decoding="async" data-nimg="fixed" style="position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%" /><noscript><img alt="Planta on the app store" srcSet="/icons/app-store.svg 1x, /icons/app-store.svg 2x" src="/icons/app-store.svg" decoding="async" data-nimg="fixed" style="position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%" loading="lazy" /></noscript></span></a></li>
+                            <li class="leading-none"><a target="_blank" rel="noreferer" class="relative" href="https://getplanta.page.link/android"><span style="box-sizing:border-box;display:inline-block;overflow:hidden;width:126px;height:36px;background:none;opacity:1;border:0;margin:0;padding:0;position:relative"><img alt="Planta on google play" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" decoding="async" data-nimg="fixed" style="position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%" /><noscript><img alt="Planta on google play" srcSet="/icons/google-play.svg 1x, /icons/google-play.svg 2x" src="/icons/google-play.svg" decoding="async" data-nimg="fixed" style="position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%" loading="lazy" /></noscript></span></a></li>
+                        </ul>
+                        <p class="h-[38px] items-center justify-end self-baseline text-spearMint">©
+                            <!-- -->2023
+                            <!-- --> GetPlanta. All rights reserved
+                            <!-- -->
+                        </p>
+                    </div>
+                </section>
+            </footer>
+        </main>
+    </div>
+    <script id="__NEXT_DATA__" type="application/json">
+        {
+            "props": {
+                "pageProps": {
+                    "_nextI18Next": {
+                        "initialI18nStore": {
+                            "en": {
+                                "common": {
+                                    "about": "About The App",
+                                    "getApp": "Get the app",
+                                    "support": "Support",
+                                    "home": "Home",
+                                    "download": "Download now",
+                                    "care_reminders_meta": "Water twice a week",
+                                    "plant_identification_meta": "Scan your plant",
+                                    "light_meeter_meta": "Place in part sun",
+                                    "dr_planta_meta": "Change plant location",
+                                    "readMore": "Read more",
+                                    "heroTitle": "Keep your plants alive",
+                                    "heroSubtitle": "Individual care schedule and reminders for your plants, recommendations, step by step guides, identification, light meter and more. Keep your plants alive with Planta!",
+                                    "plantTagsTitle": "Whatever plant \u003cbr\u003e we got you covered!",
+                                    "testimonialsTitle": "What people are saying",
+                                    "linkAllPlants": "See all plants",
+                                    "sellBannerTitle": "Want to learn more about",
+                                    "sellBannerDescription": "Get individual care schedule and reminders for your plant with our app Planta. Never kill a plant again!",
+                                    "navigation": [{
+                                        "text": "Support",
+                                        "href": "https://getplanta.kb.help/"
+                                    }],
+                                    "footerNavigation": [{
+                                        "label": "Navigation",
+                                        "items": [{
+                                            "text": "About planta",
+                                            "href": "/about"
+                                        }, {
+                                            "text": "Planta for iOS",
+                                            "href": "https://getplanta.page.link/ios"
+                                        }, {
+                                            "text": "Planta for Android",
+                                            "href": "https://getplanta.page.link/android"
+                                        }, {
+                                            "text": "Terms and conditions",
+                                            "href": "/terms-and-conditions"
+                                        }, {
+                                            "text": "Privacy policy",
+                                            "href": "/privacy-policy"
+                                        }]
+                                    }, {
+                                        "label": "Contact",
+                                        "items": [{
+                                            "text": "Help center",
+                                            "href": "https://getplanta.kb.help/"
+                                        }, {
+                                            "text": "Support",
+                                            "href": "https://direct.lc.chat/12188766/"
+                                        }, {
+                                            "text": "Send E-mail",
+                                            "href": "mailto:contact@getplanta.com"
+                                        }]
+                                    }, {
+                                        "label": "Follow us",
+                                        "items": [{
+                                            "text": "Instagram",
+                                            "href": "https://www.instagram.com/planta_app"
+                                        }, {
+                                            "text": "Facebook",
+                                            "href": "https://www.facebook.com/plantaapp"
+                                        }]
+                                    }],
+                                    "care_reminders": {
+                                        "post_title": "Unique care schedules",
+                                        "title": "Smart care reminders",
+                                        "description": "Are you not sure when it’s time to water your plants? Planta knows when! Just add them to the app and get notified when it’s time to water, fertilize, mist, clean (yes, it’s a thing) and repot!",
+                                        "img_icon_text": "Unique care schedules",
+                                        "icon_id": "water"
+                                    },
+                                    "plant_identification": {
+                                        "post_title": "Scan your plant",
+                                        "title": "Plant identification",
+                                        "description": "Maybe you are not sure which plant you have? You can just take a picture of it and we will instantly let you know. With Plantas plant scanner you can scan all your house plants to find out the plants name and how to care for them.",
+                                        "img_icon_text": "Scan your plant",
+                                        "icon_id": "scanner"
+                                    },
+                                    "light_meeter": {
+                                        "post_title": "Find the right light",
+                                        "title": "Light meter",
+                                        "description": "Would you like to put a plant in a bathroom without windows? Some plants prefer shade and some are sun-lovers. Get to know which plants are suitable in your home based on the different light conditions of your rooms.",
+                                        "img_icon_text": "Find the right light",
+                                        "icon_id": "sun"
+                                    },
+                                    "dr_planta": {
+                                        "post_title": "Plant doctor",
+                                        "title": "Dr. Planta",
+                                        "description": "Are your plants not feeling good? Dr. Planta can help you figure out what’s wrong and set up a treatment plan.",
+                                        "img_icon_text": "Plant doctor",
+                                        "icon_id": "dr_planta"
+                                    },
+                                    "howToCare": "How to care for {{plantName}}",
+                                    "careBlocks": [{
+                                        "reference": "light",
+                                        "id": "light",
+                                        "name": "Light",
+                                        "needLevels": [{
+                                            "id": "partSunPartShade",
+                                            "title": "Part sun, part shade",
+                                            "description": "Place in a window with dappled sun or a spot in the middle of a room. Or directly in a window facing west or east."
+                                        }, {
+                                            "id": "fullSun",
+                                            "title": "Full Sun",
+                                            "description": "Place in a bright room that is sun drenched almost all day. Or directly in a south-facing window."
+                                        }, {
+                                            "id": "shade",
+                                            "title": "Shade",
+                                            "description": "Place in a dark room with little light, like a dark bedroom or a spot far away from a window. Or directly in a north-facing window."
+                                        }]
+                                    }, {
+                                        "reference": "watering",
+                                        "id": "wateringNeed",
+                                        "name": "Watering need",
+                                        "needLevels": [{
+                                            "id": "medium",
+                                            "title": "Medium demand",
+                                            "description": "This plant is somewhat drought-tolerant, so no need to stress too much about it drying up. Make sure to feel the soil before watering: the top layer (about 2 inches) should be dry before giving this plant more water."
+                                        }, {
+                                            "id": "low",
+                                            "title": "Low demand",
+                                            "description": "All of the soil should be dry before watering. If the soil is still moist, you risk giving this plant too much water which can make it start to rot. When you water this plant, water well and then allow the soil to dry out completely before you water it again."
+                                        }, {
+                                            "id": "high",
+                                            "title": "High demand",
+                                            "description": "This is a water-loving plant, it does not like to dry up much. Before watering feel the soil - the top layer of soil can be slightly dry and the soil below should be a bit moist, but not wet, when watering again. Squeeze a bit of soil between your fingers - if water seeps out it’s still wet."
+                                        }, {
+                                            "id": "extreme",
+                                            "title": "Very high demand",
+                                            "description": "This plant really loves water and doesn’t like to dry up! It’s hard to overwater it, but even a water-loving plant can get overwatered. Always feel the soil before watering - it should feel damp but not wet. Squeeze a bit of soil between your fingers - if water seeps out it’s still wet."
+                                        }, {
+                                            "id": "airPlants",
+                                            "title": "For Air Plants",
+                                            "description": "Air Plants needs water about every week during summer, and every second week during winter. Make sure the Air Plant is dry within 3 hours, and check that no water is left in the base after watering."
+                                        }, {
+                                            "id": "minimum",
+                                            "title": "Minimum demand",
+                                            "description": "All of the soil should be dry before watering. If the soil is still moist, you risk giving this plant too much water which can make it start to rot. When you water this plant, water well and then allow the soil to dry out completely before you water it again."
+                                        }, {
+                                            "id": "daily",
+                                            "title": "Very high demand",
+                                            "description": "This plant really loves water and doesn’t like to dry up! It’s hard to overwater it, but even a water-loving plant can get overwatered. Always feel the soil before watering - it should feel damp but not wet. Squeeze a bit of soil between your fingers - if water seeps out it’s still wet."
+                                        }]
+                                    }, {
+                                        "reference": "fertilizing",
+                                        "id": "fertilizingNeed",
+                                        "name": "Fertilizing need",
+                                        "needLevels": [{
+                                            "id": "medium",
+                                            "title": "Medium demand",
+                                            "description": "Plants can't only survive on water, they need nutrients too. To keep your plant nice and thriving, it’s important that you add fertilizer every now and then. You can find more info below how to best fertilize this plants."
+                                        }, {
+                                            "id": "low",
+                                            "title": "Low demand",
+                                            "description": "This plant needs fertilizing just like all of your other plants, but in a lower dose. Plant fertilizer is needed to promote good growth and to stay healthy. You can find more info below how to best fertilize this plants."
+                                        }, {
+                                            "id": "minimum",
+                                            "title": "Minimum demand",
+                                            "description": "This plant does not need very much fertilizing, but giving them some extra nutrients every once in a while is important to keep them green, promote good growth and to stay healthy. You can find more info below how to best fertilize this plants."
+                                        }, {
+                                            "id": "high",
+                                            "title": "High demand",
+                                            "description": "This plant can be quite demanding and does require a lot of fertilizing to be able to grow as well as to keep green and lush. You can find more info below how to best fertilize this plants."
+                                        }, {
+                                            "id": "airPlants",
+                                            "title": "For Air plant",
+                                            "description": "Air plants don’t require much fertilizing, but feeding it once in a while will promote blooming and reproduction (pups!). Find more info below about how to fertilize your air plants."
+                                        }, {
+                                            "id": "mediumSummer",
+                                            "title": "Medium demand",
+                                            "description": "Plants can't only survive on water, they need nutrients too. To keep your plant nice and thriving, it’s important that you add fertilizer every now and then. You can find more info below how to best fertilize this plants."
+                                        }, {
+                                            "id": "minimumSummer",
+                                            "title": "Minimum demand",
+                                            "description": "This plant does not need very much fertilizing, but giving them some extra nutrients every once in a while is important to keep them green, promote good growth and to stay healthy. You can find more info below how to best fertilize this plants."
+                                        }, {
+                                            "id": "highSummer",
+                                            "title": "High demand",
+                                            "description": "This plant can be quite demanding and does require a lot of fertilizing to be able to grow as well as to keep green and lush. You can find more info below how to best fertilize this plants."
+                                        }]
+                                    }],
+                                    "seoTitle": {
+                                        "home": "Plant care app - Keep your plants alive | Planta",
+                                        "article": "{{title}}{{subPage}}Planta"
+                                    },
+                                    "seoDescription": "Individual care schedule and reminders for your plants, recommendations, step by step guides, identification, light meter and more. Keep your plants alive with Planta!"
+                                }
+                            }
+                        },
+                        "initialLocale": "en",
+                        "userConfig": {
+                            "i18n": {
+                                "locales": ["en", "sv", "de", "da", "fr", "it", "nl", "no", "nb", "ja", "ko", "es"],
+                                "localeDetection": false,
+                                "defaultLocale": "en"
+                            },
+                            "reloadOnPrerender": false,
+                            "default": {
+                                "i18n": {
+                                    "locales": ["en", "sv", "de", "da", "fr", "it", "nl", "no", "nb", "ja", "ko", "es"],
+                                    "localeDetection": false,
+                                    "defaultLocale": "en"
+                                },
+                                "reloadOnPrerender": false
+                            }
+                        }
+                    },
+                    "locale": "en",
+                    "features": {
+                        "items": [{
+                            "id": "care_reminders",
+                            "translationKey": "care_reminders"
+                        }, {
+                            "id": "plant_identification",
+                            "translationKey": "plant_identification"
+                        }, {
+                            "id": "light_meeter",
+                            "translationKey": "light_meeter"
+                        }, {
+                            "id": "dr_planta",
+                            "translationKey": "dr_planta"
+                        }]
+                    },
+                    "plantTags": [{
+                        "name": "Cacti \u0026 Succulents",
+                        "parents": [{
+                            "name": "",
+                            "parents": [],
+                            "isFeatured": false,
+                            "isDiscoverFeatured": false,
+                            "isParent": false,
+                            "isCollection": false,
+                            "region": "",
+                            "usTagReference": "",
+                            "plantingLocation": {
+                                "rawValue": "indoor"
+                            },
+                            "slug": null,
+                            "documentId": {
+                                "plantTagId": "7xX2A62qNsIcLQCwWEPU"
+                            }
+                        }],
+                        "isFeatured": true,
+                        "isDiscoverFeatured": false,
+                        "isParent": false,
+                        "isCollection": false,
+                        "region": "us",
+                        "usTagReference": "25wzVRi8tN39Huq6lzdN",
+                        "plantingLocation": {
+                            "rawValue": "indoor"
+                        },
+                        "slug": "cacti-and-succulents",
+                        "documentId": {
+                            "plantTagId": "25wzVRi8tN39Huq6lzdN"
+                        },
+                        "imageContent": {
+                            "objectID": "25wzVRi8tN39Huq6lzdN",
+                            "imageType": {
+                                "rawValue": "plantTag"
+                            },
+                            "isUserContent": false,
+                            "isDefault": false,
+                            "source": "",
+                            "author": null,
+                            "filePath": null,
+                            "dateAdded": null
+                        },
+                        "tag": "succulent",
+                        "image": "/images/plant-categories/cactus_succulents.webp"
+                    }, {
+                        "name": "Vegetables",
+                        "parents": [{
+                            "name": "",
+                            "parents": [],
+                            "isFeatured": false,
+                            "isDiscoverFeatured": false,
+                            "isParent": false,
+                            "isCollection": false,
+                            "region": "",
+                            "usTagReference": "",
+                            "plantingLocation": {
+                                "rawValue": "indoor"
+                            },
+                            "slug": null,
+                            "documentId": {
+                                "plantTagId": "uNAfouXH7msfOMNIrxMN"
+                            }
+                        }],
+                        "isFeatured": true,
+                        "isDiscoverFeatured": false,
+                        "isParent": false,
+                        "isCollection": false,
+                        "region": "us",
+                        "usTagReference": "2rrxD9NEOt6ow2svxgqh",
+                        "plantingLocation": {
+                            "rawValue": "garden"
+                        },
+                        "slug": "vegetables",
+                        "documentId": {
+                            "plantTagId": "2rrxD9NEOt6ow2svxgqh"
+                        },
+                        "imageContent": {
+                            "objectID": "2rrxD9NEOt6ow2svxgqh",
+                            "imageType": {
+                                "rawValue": "plantTag"
+                            },
+                            "isUserContent": false,
+                            "isDefault": false,
+                            "source": "",
+                            "author": null,
+                            "filePath": null,
+                            "dateAdded": null
+                        },
+                        "tag": "vegetable",
+                        "image": "/images/plant-categories/vegetables.webp"
+                    }, {
+                        "name": "Herbs",
+                        "parents": [{
+                            "name": "",
+                            "parents": [],
+                            "isFeatured": false,
+                            "isDiscoverFeatured": false,
+                            "isParent": false,
+                            "isCollection": false,
+                            "region": "",
+                            "usTagReference": "",
+                            "plantingLocation": {
+                                "rawValue": "indoor"
+                            },
+                            "slug": null,
+                            "documentId": {
+                                "plantTagId": "uNAfouXH7msfOMNIrxMN"
+                            }
+                        }],
+                        "isFeatured": true,
+                        "isDiscoverFeatured": false,
+                        "isParent": false,
+                        "isCollection": false,
+                        "region": "us",
+                        "usTagReference": "rr8mn4X2cuKBVH4mKhjw",
+                        "plantingLocation": {
+                            "rawValue": "garden"
+                        },
+                        "slug": "herbs",
+                        "documentId": {
+                            "plantTagId": "rr8mn4X2cuKBVH4mKhjw"
+                        },
+                        "imageContent": {
+                            "objectID": "rr8mn4X2cuKBVH4mKhjw",
+                            "imageType": {
+                                "rawValue": "plantTag"
+                            },
+                            "isUserContent": false,
+                            "isDefault": false,
+                            "source": "",
+                            "author": null,
+                            "filePath": null,
+                            "dateAdded": null
+                        },
+                        "tag": "herb",
+                        "image": "/images/plant-categories/herbs.webp"
+                    }, {
+                        "name": "Orchids",
+                        "parents": [{
+                            "name": "",
+                            "parents": [],
+                            "isFeatured": false,
+                            "isDiscoverFeatured": false,
+                            "isParent": false,
+                            "isCollection": false,
+                            "region": "",
+                            "usTagReference": "",
+                            "plantingLocation": {
+                                "rawValue": "indoor"
+                            },
+                            "slug": null,
+                            "documentId": {
+                                "plantTagId": "7xX2A62qNsIcLQCwWEPU"
+                            }
+                        }],
+                        "isFeatured": true,
+                        "isDiscoverFeatured": false,
+                        "isParent": false,
+                        "isCollection": false,
+                        "region": "us",
+                        "usTagReference": "ptkj7xB4w8zQxXKuhuxD",
+                        "plantingLocation": {
+                            "rawValue": "indoor"
+                        },
+                        "slug": "orchids",
+                        "documentId": {
+                            "plantTagId": "ptkj7xB4w8zQxXKuhuxD"
+                        },
+                        "imageContent": {
+                            "objectID": "ptkj7xB4w8zQxXKuhuxD",
+                            "imageType": {
+                                "rawValue": "plantTag"
+                            },
+                            "isUserContent": false,
+                            "isDefault": false,
+                            "source": "",
+                            "author": null,
+                            "filePath": null,
+                            "dateAdded": null
+                        },
+                        "tag": "orchid",
+                        "image": "/images/plant-categories/orchids.webp"
+                    }, {
+                        "name": "Foliage Plants",
+                        "parents": [{
+                            "name": "",
+                            "parents": [],
+                            "isFeatured": false,
+                            "isDiscoverFeatured": false,
+                            "isParent": false,
+                            "isCollection": false,
+                            "region": "",
+                            "usTagReference": "",
+                            "plantingLocation": {
+                                "rawValue": "indoor"
+                            },
+                            "slug": null,
+                            "documentId": {
+                                "plantTagId": "7xX2A62qNsIcLQCwWEPU"
+                            }
+                        }],
+                        "isFeatured": true,
+                        "isDiscoverFeatured": false,
+                        "isParent": false,
+                        "isCollection": false,
+                        "region": "us",
+                        "usTagReference": "RePczvkJ5QwbjbxGRCFC",
+                        "plantingLocation": {
+                            "rawValue": "indoor"
+                        },
+                        "slug": "foliage-plants",
+                        "documentId": {
+                            "plantTagId": "RePczvkJ5QwbjbxGRCFC"
+                        },
+                        "imageContent": {
+                            "objectID": "RePczvkJ5QwbjbxGRCFC",
+                            "imageType": {
+                                "rawValue": "plantTag"
+                            },
+                            "isUserContent": false,
+                            "isDefault": false,
+                            "source": "",
+                            "author": null,
+                            "filePath": null,
+                            "dateAdded": null
+                        },
+                        "tag": "foliagePlants",
+                        "image": "/images/plant-categories/foliage_plants.webp"
+                    }, {
+                        "name": "Flowering Plants",
+                        "parents": [{
+                            "name": "",
+                            "parents": [],
+                            "isFeatured": false,
+                            "isDiscoverFeatured": false,
+                            "isParent": false,
+                            "isCollection": false,
+                            "region": "",
+                            "usTagReference": "",
+                            "plantingLocation": {
+                                "rawValue": "indoor"
+                            },
+                            "slug": null,
+                            "documentId": {
+                                "plantTagId": "7xX2A62qNsIcLQCwWEPU"
+                            }
+                        }],
+                        "isFeatured": true,
+                        "isDiscoverFeatured": false,
+                        "isParent": false,
+                        "isCollection": false,
+                        "region": "us",
+                        "usTagReference": "eYgR50KUaOj2w767rpla",
+                        "plantingLocation": {
+                            "rawValue": "indoor"
+                        },
+                        "slug": "flowering-plants",
+                        "documentId": {
+                            "plantTagId": "eYgR50KUaOj2w767rpla"
+                        },
+                        "imageContent": {
+                            "objectID": "eYgR50KUaOj2w767rpla",
+                            "imageType": {
+                                "rawValue": "plantTag"
+                            },
+                            "isUserContent": false,
+                            "isDefault": false,
+                            "source": "",
+                            "author": null,
+                            "filePath": null,
+                            "dateAdded": null
+                        },
+                        "tag": "orchid",
+                        "image": "/images/plant-categories/flowering_plants.webp"
+                    }, {
+                        "slug": "succulent",
+                        "tag": "succulent",
+                        "isFeatured": false
+                    }, {
+                        "slug": "fern",
+                        "tag": "fern",
+                        "isFeatured": false
+                    }, {
+                        "slug": "grass",
+                        "tag": "grass",
+                        "isFeatured": false
+                    }, {
+                        "slug": "vine",
+                        "tag": "vine",
+                        "isFeatured": false
+                    }, {
+                        "slug": "conifer",
+                        "tag": "conifer",
+                        "isFeatured": false
+                    }, {
+                        "slug": "tropical-flowering",
+                        "tag": "tropicalFlowering",
+                        "isFeatured": false
+                    }, {
+                        "slug": "annual-flower",
+                        "tag": "annualFlower",
+                        "isFeatured": false
+                    }, {
+                        "slug": "carnivore",
+                        "tag": "carnivore",
+                        "isFeatured": false
+                    }, {
+                        "slug": "herbaceous-perennial",
+                        "tag": "herbaceousPerennial",
+                        "isFeatured": false
+                    }, {
+                        "slug": "air-plant",
+                        "tag": "airPlant",
+                        "isFeatured": false
+                    }]
+                },
+                "__N_SSP": true
+            },
+            "page": "/",
+            "query": {
+                "ref": "onepagelove"
+            },
+            "buildId": "2jLp5v1QJubheRmbuwfBF",
+            "isFallback": false,
+            "dynamicIds": [800, 2846, 2583, 3116],
+            "gssp": true,
+            "customServer": true,
+            "locale": "en",
+            "locales": ["en", "sv", "de", "da", "fr", "it", "nl", "no", "nb", "ja", "ko", "es"],
+            "defaultLocale": "en",
+            "scriptLoader": []
+        }
+    </script><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WTKWH96" height="0" width="0" style="display:none;visibility:hidden" /></noscript>
 </body>
+
 </html>
